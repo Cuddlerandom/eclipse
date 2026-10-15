@@ -104,3 +104,16 @@
 .talent-tab.selected{background:#785c32;border-color:#f2cf7d;color:#fff4c9;box-shadow:0 0 12px #ffce6344}
 .talent-coming{text-align:center;padding:30px 12px;border:1px dashed #7184a4;border-radius:11px;color:#d5e2f5}.talent-coming strong{font-size:17px}.talent-coming p{font-size:13px}
 @media(max-width:520px){.talent-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.talent-tab{min-height:43px;font-size:13px}}
+
+/* Klingenmeister specialization */
+.km-intro{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:16px 0 22px;padding:17px;border:1px solid #c6a96a88;border-radius:14px;background:linear-gradient(120deg,#3c2c19,#151f37);color:#f9dc9e}
+.km-intro strong{font-size:1.1rem;letter-spacing:1.5px}.km-intro span{font-size:.8rem;color:#e7d4ad}
+.km-tier-label{margin:26px 0 14px;text-align:center;color:#f3d7a2;font-weight:800;letter-spacing:1.2px;position:relative}
+.km-tier-label:not(:first-child):before{content:'↓';position:absolute;top:-24px;left:50%;transform:translateX(-50%);color:#c69b58;font-size:20px}
+.branch-grid.km-tier{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:12px;position:relative}
+.km-tier .talent-node{border-color:#98784988;background:linear-gradient(160deg,#29324a,#141b2c);position:relative}
+.km-tier .talent-node.invested{border-color:#e4bb6d;box-shadow:0 0 15px #dcae5533}
+.km-tier .talent-node.locked{opacity:.63;filter:saturate(.6)}
+.km-tier .km-requirement{display:block;color:#c9b48c;font-size:.72rem;margin-top:9px}
+.km-tier .node-icon{font-size:1.45rem}
+@media(max-width:520px){.branch-grid.km-tier{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.km-tier .talent-node{padding:10px}.km-tier .node-desc{font-size:.76rem}.km-tier .node-heading strong{font-size:.84rem}.km-tier .node-buy{font-size:.72rem;padding:9px 5px}}
