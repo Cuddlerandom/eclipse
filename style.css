@@ -55,3 +55,8 @@
 .talent-box p{font-size:11px;color:#b4c4d4;margin:9px}
 #talentClose{width:auto;height:38px;border-radius:9px;padding:0 20px;background:#39684e}
 @media(max-width:550px){#talentRows{grid-template-columns:1fr}}
+
+/* Larger invisible joystick activation zone, unchanged visible joystick */
+#stick{isolation:isolate;touch-action:none}
+#stick::before{content:"";position:absolute;left:-62px;right:-100px;top:-48px;bottom:-52px;border-radius:35px;background:transparent;pointer-events:auto;touch-action:none;z-index:-1}
+#knob{pointer-events:none}
