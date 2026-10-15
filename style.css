@@ -58,5 +58,5 @@
 
 /* Larger invisible joystick activation zone, unchanged visible joystick */
 #stick{isolation:isolate;touch-action:none}
-#stick::before{content:"";position:absolute;left:-62px;right:-100px;top:-48px;bottom:-52px;border-radius:35px;background:transparent;pointer-events:auto;touch-action:none;z-index:-1}
+#stick::before{content:"";position:absolute;left:-62px;right:-100px;top:-48px;bottom:-52px;border-radius:35px;background:transparent;pointer-events:auto;touch-action:none;z-index:2}
 #knob{pointer-events:none}
