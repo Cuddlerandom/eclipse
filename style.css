@@ -60,3 +60,5 @@
 #stick{isolation:isolate;touch-action:none}
 #stick::before{content:"";position:absolute;left:-62px;right:-100px;top:-48px;bottom:-52px;border-radius:35px;background:transparent;pointer-events:auto;touch-action:none;z-index:2}
 #knob{pointer-events:none}
+
+#waveStatus{position:absolute;top:calc(100% + 9px);left:50%;transform:translateX(-50%);width:max-content;max-width:65vw;padding:7px 13px;border:1px solid #f3cb75;border-radius:9px;background:#152638ee;color:#ffe5a2;font-size:12px;font-weight:900;letter-spacing:.5px;text-align:center;box-shadow:0 2px 12px #000a;white-space:nowrap;z-index:4}
