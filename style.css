@@ -97,3 +97,10 @@
 .talent-node .node-buy{width:100%;min-height:42px;border-radius:9px;background:#866336;color:#fff;font-size:12px;font-weight:800;letter-spacing:.3px}.talent-node .node-buy:disabled{opacity:.5}.talent-node.maxed .node-buy{background:#386c54;opacity:1}
 #talentClose{position:sticky;bottom:0;min-height:44px;width:100%;margin-top:16px;background:#3b7459;border:1px solid #8ad3a6;font-size:14px;font-weight:800}
 @media(max-width:520px){.talent-box{padding:13px}.branch-grid{grid-template-columns:1fr}.talent-node{padding:11px}.talent-node .node-desc{min-height:0}.talent-box .meta-summary{flex-wrap:wrap}}
+
+/* v0.39 Tower-style talent categories */
+.talent-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:0 0 15px}
+.talent-tab{min-width:0;min-height:49px;padding:7px 3px;border-radius:9px;background:#263753;border:1px solid #617b9f;color:#d3e1f2;font-size:12px;font-weight:800}
+.talent-tab.selected{background:#785c32;border-color:#f2cf7d;color:#fff4c9;box-shadow:0 0 12px #ffce6344}
+.talent-coming{text-align:center;padding:30px 12px;border:1px dashed #7184a4;border-radius:11px;color:#d5e2f5}.talent-coming strong{font-size:17px}.talent-coming p{font-size:13px}
+@media(max-width:520px){.talent-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.talent-tab{min-height:43px;font-size:13px}}
