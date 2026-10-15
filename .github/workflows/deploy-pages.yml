@@ -10,6 +10,7 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: true
+# Fresh deployment run after Pages activation
 jobs:
   deploy:
     environment:
