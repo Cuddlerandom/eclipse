@@ -1,1 +1,21 @@
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#101425;color:#fff;font-family:system-ui,-apple-system,sans-serif;touch-action:none}canvas{display:block;width:100vw;height:100dvh}#hud{position:fixed;top:env(safe-area-inset-top);left:12px;right:12px;pointer-events:none;font-size:13px;text-shadow:0 2px 4px #000}#info{font-weight:800}#timer{float:right}#hp,#xp{height:7px;margin-top:6px;border-radius:8px;background:#252c40;overflow:hidden}#hp:before,#xp:before{content:"";display:block;height:100%;width:var(--pct,100%);background:#fa5368}#xp:before{background:#61caff}#controls{position:fixed;bottom:max(18px,env(safe-area-inset-bottom));left:30px;right:30px;display:flex;justify-content:space-between;align-items:end;pointer-events:none}#stick{height:110px;width:110px;border:2px solid #ffffff55;background:#ffffff18;border-radius:50%;position:relative;pointer-events:auto}#knob{position:absolute;left:34px;top:34px;width:40px;height:40px;border-radius:50%;background:#b9d9f5aa}#buttons{display:flex;gap:14px;pointer-events:auto}button{border:1px solid #ffffff70;border-radius:50%;width:76px;height:76px;background:#3b538cbb;color:white;font-weight:900;font-size:14px;touch-action:none}#overlay{position:fixed;inset:0;background:#0c1025e8;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}#overlay.hidden{display:none}#overlay button{width:auto;height:auto;padding:16px 30px;border-radius:12px}#overlay p{max-width:500px} @media(orientation:portrait){#overlay:before{content:"Für das beste Erlebnis iPhone ins Querformat drehen";display:block;color:#ffdf91;margin-bottom:15px}}
+#levelup{position:fixed;inset:0;z-index:20;background:#09101be8;display:flex;align-items:center;justify-content:center;padding:12px max(12px,env(safe-area-inset-right)) 12px max(12px,env(safe-area-inset-left));overflow:auto}
+#levelup.hidden{display:none}
+.levelup-panel{width:min(760px,100%);text-align:center}
+.levelup-panel h2{margin:0;font-size:clamp(19px,4vw,30px);color:#f7d989;letter-spacing:1px}
+.levelup-panel p{margin:4px 0 12px;color:#d0d9e5;font-size:13px}
+#choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#choices .upgrade-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-width:0;width:100%;height:auto;min-height:150px;padding:12px 8px;border:2px solid #8e98a6;border-radius:13px;background:linear-gradient(#25313e,#111b28);color:#fff;white-space:normal;text-align:center;box-shadow:0 5px 20px #0008}
+.upgrade-icon{font-size:clamp(22px,4vw,34px)}
+.upgrade-card strong{font-size:clamp(12px,2.2vw,17px)}
+.upgrade-card small{font-size:clamp(10px,1.7vw,13px);line-height:1.3;color:#e0e7ef}
+.upgrade-card .rarity{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.5px}
+#choices .normal{border-color:#a1a6af}#choices .normal .rarity{color:#c3c8cf}
+#choices .common{border-color:#43b96a}#choices .common .rarity{color:#70e995}
+#choices .rare{border-color:#398fe8}#choices .rare .rarity{color:#79baff}
+#choices .epic{border-color:#a553e7}#choices .epic .rarity{color:#d9a2ff}
+#choices .legendary{border-color:#ff9a32;background:linear-gradient(#51371e,#231c16)}#choices .legendary .rarity{color:#ffb75e}
+#choices .prismatic{border:3px solid transparent;background:linear-gradient(#1c2131,#111827) padding-box,linear-gradient(120deg,#ff4e70,#f6c65a,#5cffb4,#59adff,#d678ff,#ff4e70) border-box;box-shadow:0 0 24px #a873ff80}
+#choices .prismatic .rarity{background:linear-gradient(90deg,#ff748d,#ffe478,#76f9bc,#78bdff,#e99aff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.levelup-tip{margin-top:9px;font-size:11px;color:#b7c5d5}
+@media(max-height:390px){#choices .upgrade-card{min-height:110px;padding:7px 5px;gap:3px}.levelup-panel p{margin:2px 0 6px}.levelup-tip{margin-top:4px}}
