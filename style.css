@@ -19,3 +19,8 @@
 #choices .prismatic .rarity{background:linear-gradient(90deg,#ff748d,#ffe478,#76f9bc,#78bdff,#e99aff);background-clip:text;-webkit-background-clip:text;color:transparent}
 .levelup-tip{margin-top:9px;font-size:11px;color:#b7c5d5}
 @media(max-height:390px){#choices .upgrade-card{min-height:110px;padding:7px 5px;gap:3px}.levelup-panel p{margin:2px 0 6px}.levelup-tip{margin-top:4px}}
+
+.stat-bar{position:relative;height:17px;margin-top:5px;border-radius:8px;overflow:hidden;background:#172233d9;box-shadow:0 1px 3px #0008}
+.stat-bar #hp,.stat-bar #xp{position:absolute;inset:0;height:100%;margin:0;background:#252c40;border-radius:8px}
+.stat-bar #hp:before,.stat-bar #xp:before{height:100%;border-radius:8px}
+.stat-bar span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;letter-spacing:.4px;text-shadow:0 1px 3px #000,0 0 4px #000;z-index:1;white-space:nowrap;pointer-events:none}
