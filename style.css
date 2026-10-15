@@ -77,3 +77,23 @@
 #statsButton{top:calc(env(safe-area-inset-top) + 100px)!important;left:10px!important;right:auto!important;max-width:100px;height:39px;font-size:12px;z-index:14}
 #pauseButton{top:calc(env(safe-area-inset-top) + 100px)!important;right:10px!important;left:auto!important;width:44px;height:39px}
 @media(max-width:390px){#hudLeft{width:40vw}#hudRight{width:40vw}#hudLeft #info{font-size:10px}#hudRight #goldCount{font-size:12px;padding:3px}}
+
+/* v0.38: expanded talent tree */
+#talentPanel{padding:12px;align-items:center}
+.talent-box{width:min(780px,100%);max-height:calc(100dvh - 24px);padding:18px;background:linear-gradient(150deg,#1a2944,#0d182c);border:1px solid #8199bb;box-shadow:0 14px 45px #000b}
+.talent-box h2{font-size:clamp(23px,5vw,30px);letter-spacing:2px;margin:0 0 12px}
+.talent-box .meta-summary{font-size:13px;padding:10px 12px;background:#263954;border-radius:10px;align-items:center}
+#talentRows{display:flex;flex-direction:column;gap:18px;text-align:left}
+.talent-branch{border:1px solid #4a6286;border-radius:14px;padding:12px;background:#12213a}
+.branch-heading h3{font-size:15px;color:#f1d38b;letter-spacing:1px;margin:0 0 4px}
+.branch-heading p{font-size:12px;margin:0 0 12px;color:#b5c7e0}
+.branch-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.talent-node{min-width:0;border:1px solid #607899;border-radius:12px;background:linear-gradient(160deg,#293c5c,#1a2942);padding:13px;display:flex;flex-direction:column;gap:10px}
+.talent-node.invested{border-color:#c2a35f}.talent-node.maxed{border-color:#78c5a0}
+.node-header{display:flex;gap:10px;align-items:center}.node-icon{display:grid;place-items:center;width:45px;height:45px;flex-shrink:0;font-size:25px;border-radius:12px;background:#0d192d;border:1px solid #7085a5}
+.node-heading{display:flex;flex-direction:column;gap:4px;min-width:0}.node-heading strong{font-size:16px;color:white}.node-heading small{font-size:12px;color:#e4c67f}
+.talent-node .node-desc{margin:0;font-size:12px;line-height:1.4;color:#d1ddef;min-height:34px}
+.node-progress{height:8px;background:#0b1525;border-radius:10px;overflow:hidden;border:1px solid #3f5574}.node-progress span{display:block;height:100%;background:linear-gradient(90deg,#c68b41,#f2d78b);border-radius:10px}
+.talent-node .node-buy{width:100%;min-height:42px;border-radius:9px;background:#866336;color:#fff;font-size:12px;font-weight:800;letter-spacing:.3px}.talent-node .node-buy:disabled{opacity:.5}.talent-node.maxed .node-buy{background:#386c54;opacity:1}
+#talentClose{position:sticky;bottom:0;min-height:44px;width:100%;margin-top:16px;background:#3b7459;border:1px solid #8ad3a6;font-size:14px;font-weight:800}
+@media(max-width:520px){.talent-box{padding:13px}.branch-grid{grid-template-columns:1fr}.talent-node{padding:11px}.talent-node .node-desc{min-height:0}.talent-box .meta-summary{flex-wrap:wrap}}
