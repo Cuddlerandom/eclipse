@@ -117,3 +117,5 @@
 .km-tier .km-requirement{display:block;color:#c9b48c;font-size:.72rem;margin-top:9px}
 .km-tier .node-icon{font-size:1.45rem}
 @media(max-width:520px){.branch-grid.km-tier{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.km-tier .talent-node{padding:10px}.km-tier .node-desc{font-size:.76rem}.km-tier .node-heading strong{font-size:.84rem}.km-tier .node-buy{font-size:.72rem;padding:9px 5px}}
+
+.hero-spec-tabs{margin:12px 0;display:flex;gap:6px;flex-wrap:wrap}.hero-spec-tabs .talent-tab:disabled{opacity:.42;cursor:not-allowed}.km-intro.berserker-intro{border-color:#e15d4788;background:linear-gradient(120deg,#51231f,#21182d);color:#ffd0bd}.berserker-tier .talent-node{border-color:#b4545488;background:linear-gradient(160deg,#352436,#181925)}.berserker-tier .talent-node.invested{border-color:#f38d6a;box-shadow:0 0 15px #f36b4933}.berserker-tier .km-requirement{color:#e9b0a0}
