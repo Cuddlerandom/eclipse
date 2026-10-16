@@ -1,68 +1,37 @@
-# ECLIPSE — Zentrale Projektdokumentation
-
+# ECLIPSE – Zentrale Projektdokumentation
 Stand: 2026-10-16
 Repository: https://github.com/Cuddlerandom/eclipse
 
-## 1. Projekt und Zuständigkeiten
-ECLIPSE – Survivors ist ein browserbasiertes Spiel mit HTML, CSS und JavaScript (Canvas).
-Dieser Chat ist die **Hauptzentrale und technische Koordination** für Entscheidungen, Versionen und Integration. Der frühere Chat „mein game“ existiert nicht mehr. Weitere Projekt-Chats entwickeln abgegrenzte Komponenten (Krieger, Gegner/Wölfe, Bosse, Spielwelt, Gameplay, UI, Tests). GitHub ist die gemeinsame technische Quelle; Chats synchronisieren Änderungen nicht automatisch.
+## Spiel und technische Grundlage
+ECLIPSE – Survivors ist ein browserbasiertes Action-Survivors-Spiel mit HTML, CSS und JavaScript/Canvas. Der aktuelle Code auf GitHub ist verbindlich.
 
-## 2. Verifizierter technischer Stand
-- `index.html` bindet `style.css?v=080` und `game.js?v=0113` ein.
-- Das Spiel nutzt ein `canvas` mit der ID `game`.
-- Sichtbare UI: Lebenspunkte, Erfahrung, Level, Gold, Wellenstatus, Timer, Werte-Panel, Dash-Steuerung, Level-up-Auswahl, Endbildschirm und Freischaltungen.
-- Die Oberfläche ist auf Deutsch und für mobile Bedienung ausgelegt.
-- Exakte interne Implementierungen und der aktuelle Funktionsumfang sind vor jeder Änderung in den jeweiligen Quelldateien zu prüfen.
+Bei der Prüfung vom 2026-10-16 wurden `index.html`, `game.js` und `style.css` als Kerndateien vorgefunden. `index.html` enthält das Canvas `game` und bindet `style.css?v=080` sowie `game.js?v=0113` ein. Diese Query-Parameter sind keine verifizierte Spielversionsnummer. Die Oberfläche enthält unter anderem HP, XP, Gold, Wellenstatus, Timer, Dash, Level-up, Werte und Freischaltungen. Tatsächliche Funktion und Balancing sind vor Änderungen am Code zu prüfen.
 
-## 3. Gestaltungs- und Animationsziele
-- Krieger-Design B ist die bisherige Referenz; vor verbindlichen Sprite-Änderungen Originalgrafiken und Hauptzentrale prüfen.
-- Ziel: flüssige, nachvollziehbare Bewegungs- und Kampfanimationen mit konsistenten Frames.
-- Bekannte Prüfpunkte aus der Entwicklung: wellenförmige Laufbewegung und unerwünschtes weisses Samurai-Schwert.
-- Die 13 diskutierten Animationsarten sind im alten Chat zu verifizieren, bevor konkrete Namen/Framezahlen als endgültig dokumentiert werden.
-- Wölfe und andere Gegner müssen optisch und technisch zur bestehenden Spielwelt passen.
+## Verbindliche Rollen
+- **Game Director:** Nutzer; entscheidet über Vision, Design, Prioritäten und Zuständigkeiten.
+- **Hauptzentrale:** Nur der vom Game Director ausdrücklich bestimmte Chat; technische Leitung, Gameplay, Programmierung, Balancing, Integration und Qualitätssicherung.
+- **Fach-Chats:** Alle übrigen Chats, jeweils nur für den zugewiesenen visuellen Bereich. Neue Chats ohne Auftrag fragen den Game Director. Niemand ernennt sich selbst zur Hauptzentrale.
 
-## 4. Regeln für jeden Entwicklungs-Chat
-1. Zuerst diese Datei und die betroffenen aktuellen GitHub-Dateien lesen.
-2. Vor Änderungen bestehende Schnittstellen, Dateinamen und Abhängigkeiten prüfen.
-3. Eigenständige Module/Assets bevorzugen; bestehende Spielmechanik nicht ungefragt ersetzen.
-4. Kein unkoordiniertes Überschreiben gemeinsamer Dateien wie `game.js`.
-5. Neue Grafiken mit eindeutigen Namen, konsistenten Abmessungen, transparenten Hintergründen (wenn passend) und dokumentierten Animationszuständen liefern.
-6. Jede Änderung mit betroffenen Dateien, Funktionsweise, Abhängigkeiten und Teststatus dokumentieren.
-7. Keine nicht getestete Änderung als fehlerfrei bezeichnen.
-8. Konflikte oder Architekturentscheidungen an die Hauptzentrale zur Entscheidung zurückgeben.
+## Zuständigkeiten
+Fach-Chats liefern ausschliesslich visuelle Designs, Sprites, Animationen, visuelle Effekte, Umgebungen und isolierte Vorschauen. Eigene Branches und Asset-Dateien sind erlaubt. Platzhalterwerte für Vorschauen sind ausdrücklich unverbindlich.
 
-## 5. Übergabeformat an die Hauptzentrale
-- Bereich / Entwicklungs-Chat:
-- Ziel und Ergebnis:
-- Dateien neu / geändert:
-- Schnittstellen und Abhängigkeiten:
-- Bedienung / Animationen / Frameangaben:
-- Tests (bestanden / offen / nicht durchgeführt):
-- Bekannte Probleme:
-- GitHub-Commit oder Pull Request (falls vorhanden):
-- Integrationsschritte:
+Nur die Hauptzentrale entscheidet und programmiert Gameplay-Werte und -Mechaniken: HP, Schaden, Rüstung, Bewegung, Angriff, KI, Hitboxen, Spawn, XP, Gold, Talente, Fähigkeiten, Progression, Balancing und gemeinsame Spielschnittstellen. Fach-Chats ändern diese nicht eigenmächtig.
 
-## 6. Integrationsablauf
-1. Aktuelle Hauptversion prüfen.
-2. Änderungen in eigenem Branch oder isolierten Dateien entwickeln, sofern möglich.
-3. Komponente einzeln testen.
-4. In der Hauptzentrale Konflikte, Schnittstellen und Darstellung prüfen.
-5. Zusammenführung kontrolliert durchführen und das Gesamtspiel erneut testen.
-6. Versionsstand und offene Probleme hier dokumentieren.
+## GitHub und Integration
+1. Vor jeder Entwicklungsaufgabe `AGENTS.md`, `ECLIPSE_PROJECT.md`, `ECLIPSE_STATUS.md`, `ECLIPSE_DESIGN.md` sowie betroffene aktuelle Quelldateien prüfen.
+2. Fach-Chats entwickeln Assets und isolierte Vorschauen möglichst in eigenen Branches; sie verändern `game.js`, `index.html`, `style.css`, Gameplay-Module oder fremde Komponenten nur mit vorheriger Freigabe der Hauptzentrale.
+3. Die Hauptzentrale koordiniert Änderungen an `main`, überprüft Schnittstellen und Regressionen und integriert Komponenten in die spielbare Hauptversion.
+4. Bestehende Funktionen und bestätigte Designs bleiben erhalten, solange der Game Director nichts anderes beschliesst.
+5. Chats kommunizieren nicht automatisch. GitHub ist der gemeinsame Übergabepunkt.
 
-## 7. Offene Bestätigungen
-- Exakte aktuelle Spielversion (Datei-Query-Parameter sind keine sichere Versionsangabe).
-- Vollständige Liste der 13 Animationsarten.
-- Endgültige Sprite-Masse, Frameraten, Grafikstil und Dateistruktur.
-- Aktuelle Roadmap und Prioritäten aus dem vorhandenen Projektkontext.
+## Übergabeformat
+- Fachbereich, Auftrag und Ergebnis
+- Neu erstellte oder geänderte Dateien
+- Branch, Commit oder Pull Request
+- Sprite-Masse, Ankerpunkte, Animationszustände und Frametiming (falls relevant)
+- Schnittstellen und Abhängigkeiten
+- Durchgeführte Tests und nicht getestete Teile
+- Bekannte Probleme und Hinweise für die Hauptzentrale
 
-**Grundsatz:** Der reale Repository-Stand und die bestätigten Entscheidungen des Game Directors und der Hauptzentrale haben Vorrang vor Annahmen aus Neben-Chats.
-
-## Verbindliche Integrationsrechte für alle bestehenden und neuen Fach-Chats
-1. Jeder Fach-Chat darf seine eigenen Komponenten selbstständig entwickeln, in seinem eigenen Branch einbauen und dort testen. Einbau bedeutet **nicht** automatisch Freigabe für `main`.
-2. Vor der Arbeit aktuelle GitHub-Dateien `AGENTS.md`, `ECLIPSE_PROJECT.md`, `ECLIPSE_STATUS.md`, `ECLIPSE_DESIGN.md` und betroffene Quelldateien prüfen.
-3. Fach-Chats dürfen neue isolierte Dateien und Assets für ihren Bereich erstellen. Änderungen an gemeinsam genutzten Dateien (insbesondere `game.js`, `index.html`, `style.css`), öffentlichen Schnittstellen oder fremden Komponenten **vorher mit der Hauptzentrale abstimmen**; nicht eigenmächtig auf `main` schreiben.
-4. Für übergreifende Anpassungen eine konkrete Änderung samt betroffenen Dateien und Abhängigkeiten vorschlagen und auf Freigabe warten; bevorzugt Pull Request/Branch statt direkter Änderung der Hauptversion.
-5. Vor einer Übergabe eigene Tests dokumentieren und Commit/Branch/PR, Dateien, Schnittstellen, offene Fehler und Integrationsanleitung nennen. Ohne Nachweis kein Status „integriert“ oder „getestet“.
-6. Nur die Hauptzentrale koordiniert das Zusammenführen in `main`, prüft Konflikte und Regressionen und dokumentiert den Integrationsstatus in `ECLIPSE_STATUS.md`. Releases und grosse Architekturänderungen benötigen Koordination; kreative Entscheidungen trifft der Game Director.
-7. Diese Regeln gelten auch für **neu erstellte Chats**. Projektanweisungen sind der Einstieg; GitHub bleibt die aktuelle Wahrheit. Chats kommunizieren nicht automatisch miteinander.
+## Entwicklungsstatus
+Aktuelle Fortschritte, bestätigte Übergaben und Integrationsstatus stehen in `ECLIPSE_STATUS.md`. Gestalterische Vorgaben stehen in `ECLIPSE_DESIGN.md`. Nicht belegte Angaben sind offen und dürfen nicht als endgültig ausgegeben werden.
