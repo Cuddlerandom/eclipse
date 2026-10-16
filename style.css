@@ -150,3 +150,21 @@
 #dash{background:radial-gradient(circle at 35% 25%,#596a73,#253742 70%);border:2px solid #b69a6a;color:#f6e8c8;box-shadow:inset 0 0 0 2px #111b21aa,0 2px 12px #0009}
 #stick{border-color:#ad956e;background:#292e2b66;box-shadow:inset 0 0 0 3px #181b1c55,0 2px 12px #0006}
 #knob{background:radial-gradient(circle at 30% 25%,#c2c6b7,#62716d 80%);border:2px solid #d4bd91;box-shadow:0 2px 7px #0009}
+
+/* v0.79: fantasy level-up reward cards */
+#levelup{background:radial-gradient(ellipse at center,#18221de8,#090f12f2 78%);backdrop-filter:blur(3px)}
+.levelup-panel{padding:10px 4px}
+.levelup-panel h2{color:#f7d99a;text-shadow:0 2px 2px #000,0 0 16px #b98b4b55;letter-spacing:2px}
+.levelup-panel>p{color:#e7d9bc;margin:6px 0 16px}
+#choices{gap:12px}
+#choices .upgrade-card{position:relative;min-height:155px;padding:14px 9px 12px;gap:7px;border:2px solid #9a8c72;border-radius:12px;background:linear-gradient(155deg,#343027,#1c2526 54%,#121b20);box-shadow:inset 0 0 0 2px #e6d2a51c,inset 0 12px 22px #ffffff08,0 6px 16px #000b;overflow:hidden}
+#choices .upgrade-card:before{content:'◆';position:absolute;top:4px;left:8px;font-size:9px;color:#d9bb7d8c}
+#choices .upgrade-card:after{content:'◆';position:absolute;top:4px;right:8px;font-size:9px;color:#d9bb7d8c}
+#choices .upgrade-card .upgrade-icon{display:grid;place-items:center;width:47px;height:47px;flex-shrink:0;border-radius:50%;border:1px solid #9b815b;background:radial-gradient(circle,#564a35,#242923 75%);font-size:27px;filter:drop-shadow(0 2px 2px #0008)}
+#choices .upgrade-card strong{color:#fff0d2;font-size:clamp(12px,2.1vw,17px);line-height:1.2;text-shadow:0 2px 3px #000}
+#choices .upgrade-card .rarity{font-size:10px;letter-spacing:1.1px;padding:3px 7px;border-top:1px solid currentColor;border-bottom:1px solid currentColor}
+#choices .upgrade-card small{color:#e1e3da;font-size:clamp(10px,1.6vw,13px);line-height:1.35;font-weight:600}
+#choices .normal{border-color:#9b978d}#choices .common{border-color:#51b97a}#choices .rare{border-color:#4f9ee7}#choices .epic{border-color:#aa69df}#choices .legendary{border-color:#edaf55;background:linear-gradient(155deg,#4a3523,#29251e 60%,#191c1c)}
+#choices .prismatic{border:3px solid transparent;background:linear-gradient(155deg,#302e2b,#172025) padding-box,linear-gradient(120deg,#ff6b83,#f8cc71,#69e4a5,#6db8ff,#ce8bfa) border-box}
+.levelup-tip{color:#c7bda8;margin-top:15px}
+@media(max-height:440px){#choices .upgrade-card{min-height:116px;padding:8px 5px;gap:4px}#choices .upgrade-card .upgrade-icon{width:34px;height:34px;font-size:21px}.levelup-panel>p{margin:3px 0 8px}.levelup-tip{margin-top:7px}}
