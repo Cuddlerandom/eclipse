@@ -1,50 +1,30 @@
-# ECLIPSE — Entwicklungsanweisungen für alle Chats und Coding Agents
+# ECLIPSE – Verbindliche Entwicklungsregeln
+Stand: 2026-10-16
 
-Diese Datei gilt als gemeinsamer Leitfaden für Arbeiten am Repository. Vor jeder Änderung zusätzlich `ECLIPSE_PROJECT.md` lesen.
+## 1. Rollenidentifikation
+- **Game Director:** Der Nutzer entscheidet über Spielvision, Designs, Prioritäten und Zuständigkeiten.
+- **Hauptzentrale:** Ausschliesslich der Chat, den der Game Director ausdrücklich dazu bestimmt hat. Dieser Chat koordiniert Technik, Gameplay, Balancing, Integration und Qualitätssicherung.
+- **Fach-Chats:** Alle anderen Chats. Sie sind auf ihren vom Game Director zugewiesenen visuellen Fachbereich beschränkt.
+- Ein neuer Chat ohne zugewiesenen Aufgabenbereich fragt zuerst den Game Director. Kein Chat darf sich selbst zur Hauptzentrale erklären.
+- Nur der Game Director kann Rollen und Zuständigkeiten ändern.
 
-## Rollen
-- **Game Director:** Nutzer; bestimmt kreative Richtung und Prioritäten.
-- **Hauptzentrale:** dieser Chat (Hauptzentrale und Technik); bestätigt übergreifende Entscheidungen, Roadmap und Releases.
-- **Hauptzentrale / Technik:** koordiniert Architektur, Integration, Qualitätssicherung, Versionskonflikte und GitHub-Dokumentation.
-- **Fach-Chats:** z. B. Krieger, Wölfe, Bosse, Spielwelt, Gameplay, UI; arbeiten an klar abgegrenzten Komponenten.
+## 2. Strikte Aufgabenverteilung
+**Fach-Chats:** Designs, Sprites, Sprite-Sheets, Animationen, visuelle Effekte, visuelle Spielwelt und isolierte Vorschauen des eigenen Bereichs.
 
-## Verbindlicher Ablauf
-1. Zuerst den aktuellen Repository-Stand und `ECLIPSE_PROJECT.md` prüfen. Nie von einer alten Kopie ausgehen.
-2. Zuständigkeit und betroffene Dateien vor der Änderung benennen.
-3. Änderungen nach Möglichkeit in separaten Modulen, Assets oder Branches vornehmen; gemeinsame Kerndateien nur koordiniert verändern.
-4. Vorhandenes Spielverhalten und Originaldesigns bewahren, sofern keine ausdrückliche Änderung beschlossen wurde.
-5. Änderungen auf Fehler, mobile Darstellung, Performance, Steuerung und Animationen prüfen; ungeprüfte Funktionen nicht als getestet bezeichnen.
-6. Nach jeder Arbeit einen Übergabebericht liefern: Ziel, Dateien, Änderungen, Schnittstellen, Teststatus, Probleme und Commit/PR.
-7. Integrations- und Architekturkonflikte an diesen Hauptzentrale-/Technik-Chat geben; grundlegende kreative Entscheidungen an den Game Director.
-8. Keine eigenmächtigen Releases oder umfangreichen Umstrukturierungen.
+**Nur Hauptzentrale:** Gameplay-Code und -Systeme, HP, Schaden, Rüstung, Geschwindigkeit, KI, Hitboxen, Kollisionen, Spawnraten, XP, Gold, Fähigkeiten, Balancing, gemeinsame Schnittstellen, Integration und Qualitätssicherung.
 
-## Technischer Kontext
-Browsergame „ECLIPSE – Survivors“ mit HTML, CSS und JavaScript/Canvas. Die tatsächlich vorhandenen Implementierungen in GitHub sind verbindlich. Vorhandene UI umfasst unter anderem HP, XP, Gold, Wellen, Dash, Level-up und Freischaltungen.
+Fach-Chats dürfen keine Gameplay-Werte oder Mechaniken eigenmächtig festlegen oder verändern. Animationsvorschauen dürfen klar gekennzeichnete Dummy-Werte verwenden; diese sind keine verbindlichen Spielwerte. Grafische Effektmarker sind keine Freigabe für Gameplay-Hitboxen.
 
-## Animationen und Assets
-- Bisheriges Krieger-Design als Referenz erhalten.
-- Flüssige, konsistente Frameabfolgen; kein ungewolltes Wellenlaufen.
-- Unerwünschtes weisses Samurai-Schwert nicht erneut einführen.
-- Sprite-Masse, Ankerpunkte, Frametiming, Hitboxen und Dateinamen bei Übergaben dokumentieren.
-- Offene Designfragen anhand der Hauptzentrale bestätigen, nicht erfinden.
+## 3. Verbindlicher Arbeitsablauf
+1. Vor Entwicklungsarbeiten die aktuellen GitHub-Dateien `AGENTS.md`, `ECLIPSE_PROJECT.md`, `ECLIPSE_STATUS.md`, `ECLIPSE_DESIGN.md` und betroffene Quelldateien lesen.
+2. Eigenen Aufgabenbereich prüfen; bei fehlender Zuweisung den Game Director fragen.
+3. Fach-Chats arbeiten an eigenen Assets und isolierten Vorschauen, möglichst in separaten Branches.
+4. Gemeinsame Dateien wie `game.js`, `index.html`, `style.css`, Gameplay-Module und fremde Komponenten ohne vorherige Freigabe der Hauptzentrale nicht verändern.
+5. Keine eigenmächtigen Merges in `main`; nur die Hauptzentrale koordiniert Integration und gemeinsame Änderungen.
+6. Bestehende Funktionen und bestätigte Designs bewahren; keine ungetesteten Ergebnisse als getestet ausgeben.
+7. Übergabe dokumentieren: Fachbereich, Ziel, Dateien, Branch/Commit/PR, Sprite-Masse, Ankerpunkte, Animationszustände, Frametiming, Tests, bekannte Probleme und Integrationshinweise (soweit relevant).
 
-## Wichtig zur Chat-Kommunikation
-ChatGPT-Projekt-Chats kommunizieren nicht automatisch miteinander. Diese Datei verschickt keine Nachrichten und erzwingt keine automatische Synchronisierung. Jeder Chat muss die GitHub-Dateien aktiv lesen; Änderungen müssen dort gespeichert und in der Hauptzentrale/Technik überprüft werden.
+## 4. Kommunikation
+GitHub ist die verbindliche Quelle für Code, Assets und Entwicklungsstand. Chats kommunizieren nicht automatisch miteinander. Projektquellen können veralten; GitHub-Dateien vor Änderungen erneut prüfen.
 
-## Verbindliche Integrationsrechte für alle bestehenden und neuen Fach-Chats
-1. Jeder Fach-Chat darf seine eigenen Komponenten selbstständig entwickeln, in seinem eigenen Branch einbauen und dort testen. Einbau bedeutet **nicht** automatisch Freigabe für `main`.
-2. Vor der Arbeit aktuelle GitHub-Dateien `AGENTS.md`, `ECLIPSE_PROJECT.md`, `ECLIPSE_STATUS.md`, `ECLIPSE_DESIGN.md` und betroffene Quelldateien prüfen.
-3. Fach-Chats dürfen neue isolierte Dateien und Assets für ihren Bereich erstellen. Änderungen an gemeinsam genutzten Dateien (insbesondere `game.js`, `index.html`, `style.css`), öffentlichen Schnittstellen oder fremden Komponenten **vorher mit der Hauptzentrale abstimmen**; nicht eigenmächtig auf `main` schreiben.
-4. Für übergreifende Anpassungen eine konkrete Änderung samt betroffenen Dateien und Abhängigkeiten vorschlagen und auf Freigabe warten; bevorzugt Pull Request/Branch statt direkter Änderung der Hauptversion.
-5. Vor einer Übergabe eigene Tests dokumentieren und Commit/Branch/PR, Dateien, Schnittstellen, offene Fehler und Integrationsanleitung nennen. Ohne Nachweis kein Status „integriert“ oder „getestet“.
-6. Nur die Hauptzentrale koordiniert das Zusammenführen in `main`, prüft Konflikte und Regressionen und dokumentiert den Integrationsstatus in `ECLIPSE_STATUS.md`. Releases und grosse Architekturänderungen benötigen Koordination; kreative Entscheidungen trifft der Game Director.
-7. Diese Regeln gelten auch für **neu erstellte Chats**. Projektanweisungen sind der Einstieg; GitHub bleibt die aktuelle Wahrheit. Chats kommunizieren nicht automatisch miteinander.
-
-## Verbindliche Trennung: Design-Fach-Chats und Gameplay-Hauptzentrale
-**Entscheidung des Game Directors (2026-10-16):** Bestehende Fach-Chats (Krieger, Wölfe, Bosse, Spielwelt und weitere visuelle Fachbereiche) sind ausschliesslich für visuelle Gestaltung, Sprites, Animationen, Art-Assets und visuelle Effekte zuständig. Sie dürfen dafür eigene Assets und isolierte Vorschauen/Test-Harnesses in separaten Branches entwickeln und testen.
-
-**Ausschliesslich Hauptzentrale/Technik:** HP, Schaden, Rüstung, Tempo, Angriffsradius, Abklingzeiten, Hitbox-/Kollisionslogik, Gegner-KI, Spawnverhalten, XP, Gold, Drops, Progression, Fähigkeiten, Schwierigkeit, Balancing, Gameplay-Code und Einbindung in die spielbare Hauptversion. Keine eigenmächtige Änderung dieser Werte oder Mechaniken durch Design-Chats.
-
-Design-Chats dürfen für reine Animationsvorschauen unverbindliche Dummy-Werte nutzen, müssen diese als Platzhalter kennzeichnen und dürfen sie nicht in die Hauptspielmechanik übernehmen. Animationsmetadaten (Framezahl, Timing, Bildmasse, Ankerpunkte, grafische Treffer-/Effektmarker) dürfen vorgeschlagen werden; die Hauptzentrale entscheidet über Gameplay-Schnittstellen, aktive Hitboxen und Balance.
-
-Jede Übergabe enthält Asset-Pfade, Vorschau, Sprite-Masse, Ankerpunkte, Animationszustände, Frametiming, Branch/Commit und Teststatus. Fach-Chats dürfen `game.js`, `index.html`, `style.css` und Gameplay-Module ohne vorherige explizite Freigabe nicht verändern; keine eigenmächtigen Merges in `main`. Auch neue Fach-Chats unterliegen dieser Regel. Die kreative Freigabe liegt beim Game Director.
+Diese Regeln gelten für alle bestehenden und zukünftigen Eclipse-Chats. Die Projektanweisungen des Game Directors haben bei Rollenkonflikten Vorrang.
