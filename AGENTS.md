@@ -1,7 +1,6 @@
 # ECLIPSE – Verbindliche Entwicklungsregeln
 Stand: 2026-10-16
 
-
 ## Verbindliche Stilreferenz
 Für sämtliche visuellen Fachbereiche ist **BALL x PIT** die vom Game Director bestimmte Stilreferenz (detailreiche, lesbare Pixel-Art und einheitliche Gestaltung). Nur als Inspiration verwenden; keine fremden Assets kopieren. Verbindliche Einzelheiten stehen in `ECLIPSE_DESIGN.md`. Vor Integration neuer visueller Assets ist die Freigabe des Game Directors einzuholen.
 
@@ -28,7 +27,13 @@ Fach-Chats dürfen keine Gameplay-Werte oder Mechaniken eigenmächtig festlegen 
 6. Bestehende Funktionen und bestätigte Designs bewahren; keine ungetesteten Ergebnisse als getestet ausgeben.
 7. Übergabe dokumentieren: Fachbereich, Ziel, Dateien, Branch/Commit/PR, Sprite-Masse, Ankerpunkte, Animationszustände, Frametiming, Tests, bekannte Probleme und Integrationshinweise (soweit relevant).
 
-## 4. Kommunikation
+## 4. Werkzeuge und Plugins
+Für jede Aufgabe passende verfügbare und berechtigte Werkzeuge oder verbundene Plugins prüfen und zweckmässig nutzen. GitHub bleibt die verbindliche Quelle für Repository-Arbeit. Nicht alle Plugins werden automatisch eingesetzt; fehlende Verbindung, Berechtigung oder Verfügbarkeit offen mitteilen. Kein Werkzeug erweitert Zuständigkeiten oder Freigaberechte.
+
+## 5. Fertigmeldung und Veröffentlichung
+Nach jeder Entwicklungsarbeit meldet die Hauptzentrale: fertig/offen, Dateien und Commit/Branch, tatsächliche Tests, bekannte Probleme, ob main geändert wurde und ob die öffentliche Website nachweislich aktualisiert und testbar ist. Code-Merge, Test und Website-Veröffentlichung sind unterschiedliche Zustände. Keine unbestätigten Versionsnummern oder Testlinks als verifiziert ausgeben.
+
+## 6. Kommunikation
 GitHub ist die verbindliche Quelle für Code, Assets und Entwicklungsstand. Chats kommunizieren nicht automatisch miteinander. Projektquellen können veralten; GitHub-Dateien vor Änderungen erneut prüfen.
 
 Diese Regeln gelten für alle bestehenden und zukünftigen Eclipse-Chats. Die Projektanweisungen des Game Directors haben bei Rollenkonflikten Vorrang.
