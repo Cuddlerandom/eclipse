@@ -2,7 +2,6 @@
 Stand: 2026-10-16
 Repository: https://github.com/Cuddlerandom/eclipse
 
-
 ## Verbindliche visuelle Richtung
 ECLIPSE orientiert sich stilistisch an **BALL x PIT**: hochwertige, gut lesbare Pixel-Art mit atmosphärischen Umgebungen, eigenständigen Sprites und stimmigen Effekten. Die Referenz betrifft ausschliesslich die visuelle Gestaltung, nicht Gameplay-Mechaniken oder das Kopieren fremder Grafiken. Die detaillierten Anforderungen stehen in `ECLIPSE_DESIGN.md`; alle Fach-Chats prüfen sie vor visueller Arbeit. Der Game Director genehmigt Vorschauen vor der Integration.
 
@@ -36,6 +35,12 @@ Nur die Hauptzentrale entscheidet und programmiert Gameplay-Werte und -Mechanike
 - Schnittstellen und Abhängigkeiten
 - Durchgeführte Tests und nicht getestete Teile
 - Bekannte Probleme und Hinweise für die Hauptzentrale
+
+## Werkzeuge und Freigaben
+Passende verfügbare, verbundene und autorisierte Plugins/Werkzeuge werden je nach Aufgabe eingesetzt, nicht pauschal alle. Werkzeuge ändern keine Zuständigkeiten: Fach-Chats bleiben für isolierte visuelle Arbeiten zuständig; Hauptzentrale verantwortet Integration, Gameplay und QA. Die verbindliche Prozessregel steht in `AGENTS.md`.
+
+## Veröffentlichung und Rückmeldung
+Asset-Fertigstellung, Designfreigabe, Integration, Merge nach `main`, Laufzeittest und öffentliche Website-Veröffentlichung sind getrennte Zustände. Die Hauptzentrale meldet nach jeder Entwicklungsarbeit den belegten Stand, offene Probleme und einen Testlink nur bei bestätigter Verfügbarkeit. Cache-Query-Parameter sind keine bestätigte Versionsnummer.
 
 ## Entwicklungsstatus
 Aktuelle Fortschritte, bestätigte Übergaben und Integrationsstatus stehen in `ECLIPSE_STATUS.md`. Gestalterische Vorgaben stehen in `ECLIPSE_DESIGN.md`. Nicht belegte Angaben sind offen und dürfen nicht als endgültig ausgegeben werden.
