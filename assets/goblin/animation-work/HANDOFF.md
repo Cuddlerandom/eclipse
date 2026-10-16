@@ -1,25 +1,11 @@
-# Goblin – Animation Handoff (2026-10-16)
+# Goblin V0.4 – technical cleanup (NOT final)
 
-Branch: `feature/goblin-assets`. The Game Director approved the red-hooded goblin **concept**, not these final animation frames. All animations remain visual prototypes.
+Local deliverable: eclipse_goblin_v04_cleanup.zip attached in Goblin Fach-Chat. Contains 24 true RGBA PNG frames, 5 horizontal PNG sheets, animations.json, preview.html, comparison.png. The PNGs are NOT uploaded to GitHub: container network DNS to github.com fails and there is no authorized binary transfer bridge into the GitHub connector.
 
-## Sprite assets (uploaded on this branch)
+Frames: 256x256, provisional anchor (128,230). Timings: idle 4x180ms; run 6x100ms; attack 6x90ms; hit 3x110ms; death 5x150ms. These are visual preview values, not gameplay values.
 
-The binary images from the supplied `eclipse_goblin_handoff_v02(1)(1).zip` are stored in `assets/goblin/animation-work/`: five PNG animation sheets, five corresponding GIF previews, five static `*_preview.png` images, and `animation_overview.png` (16 image files total). The ten animation files referenced by `animations.json` are included. No gameplay integration is performed.
+Changes: alpha fringe cleanup and nearest-neighbor pixel resampling. No intentional recoloring or redesign. Missing contours/details from V0.3 extraction cannot be automatically recovered. Remaining pose inconsistencies mean this is still a prototype, not approved production art.
 
-| Animation | PNG | Frames | Frame size | Duration | Anchor | Loop |
-|---|---|---:|---|---:|---|---|
-| idle | goblin_idle.png | 4 | 64x64 | 180 ms | (32,57) | yes |
-| run | goblin_run.png | 6 | 64x64 | 100 ms | (32,57) | yes |
-| attack | goblin_attack.png | 6 | 64x64 | 90 ms | (32,57) | no |
-| hit | goblin_hit.png | 3 | 64x64 | 110 ms | (32,57) | no |
-| death | goblin_death.png | 5 | 64x64 | 150 ms | (32,57) | no |
+Tests: decoded 24 source PNGs; generated 24 RGBA PNG frames and 5 sheets; created comparison image. No game/iPhone/browser runtime tests. Renderer smoothing not verified; Hauptzentrale should inspect imageSmoothingEnabled, pixel alignment and scaling.
 
-All horizontal RGBA PNG sheets, 24 frames total. The ZIP also includes corresponding GIF previews, a contact sheet, `animations.json`, `preview.html`, and this handoff. The existing JSON and HTML are unchanged and their PNG/GIF references resolve to the uploaded files.
-
-## Checks actually performed
-
-Pillow inspection of existing ZIP: all 5 PNG sheets have expected pixel dimensions, RGBA with alpha extrema 0..255; all GIFs have the expected frame count, transparency index, and per-frame durations. For this upload, the extracted images were checked again: PNG dimensions, RGBA alpha range, GIF frame counts and per-frame durations match `animations.json`. All 16 images decode successfully. The existing JSON/HTML differ from the ZIP in metadata/presentation, but their animation parameters agree; ZIP sheet SHA-256 values match the uploaded bytes; the five HTML state definitions match JSON frame counts, timings and loop flags. **Not tested:** browser runtime, phone readability, visual polish against approved design, gameplay integration.
-
-## Known issues and integration notes
-
-The sprite prototype is visually simpler than the approved detailed concept and needs artistic refinement. Frame sizes, anchor and timing are provisional for previews, not binding gameplay or hitbox parameters. Hauptzentrale handles integration and gameplay. No modifications to `main`, `game.js`, `index.html`, `style.css`.
+Upload: extract ZIP into assets/goblin/animation-work/ on feature/goblin-assets, commit real PNG binaries; do not integrate without explicit Game Director approval. No main/gameplay changes.
