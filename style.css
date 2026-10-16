@@ -168,3 +168,10 @@
 #choices .prismatic{border:3px solid transparent;background:linear-gradient(155deg,#302e2b,#172025) padding-box,linear-gradient(120deg,#ff6b83,#f8cc71,#69e4a5,#6db8ff,#ce8bfa) border-box}
 .levelup-tip{color:#c7bda8;margin-top:15px}
 @media(max-height:440px){#choices .upgrade-card{min-height:116px;padding:8px 5px;gap:4px}#choices .upgrade-card .upgrade-icon{width:34px;height:34px;font-size:21px}.levelup-panel>p{margin:3px 0 8px}.levelup-tip{margin-top:7px}}
+
+/* v0.80: unified fantasy glyphs, no platform emoji rendering */
+#choices .upgrade-icon.rpg-icon{font-family:Georgia,'Times New Roman',serif;font-size:31px;font-weight:900;color:#f6dca0;text-shadow:0 2px 2px #000,0 0 9px #e9b96170;line-height:1;font-variant-emoji:text}
+#choices .rpg-health,#choices .rpg-healthMasterRun,#choices .rpg-regenRun{color:#ee8278}
+#choices .rpg-armor,#choices .rpg-armorMasterRun,#choices .rpg-reductionRun{color:#a8d5e7}
+#choices .rpg-cdr,#choices .rpg-speed,#choices .rpg-dodgeRun{color:#a5e1c3}
+#choices .rpg-crit,#choices .rpg-critMultiplier,#choices .rpg-attackSpeedRun{color:#ffcb79}
