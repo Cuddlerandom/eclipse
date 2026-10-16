@@ -5,7 +5,7 @@ Repository: https://github.com/Cuddlerandom/eclipse
 
 ## 1. Projekt und Zuständigkeiten
 ECLIPSE – Survivors ist ein browserbasiertes Spiel mit HTML, CSS und JavaScript (Canvas).
-Der ursprüngliche Chat **„mein game“** ist die **Hauptzentrale** für Entscheidungen, Versionen und Integration. Weitere Projekt-Chats entwickeln abgegrenzte Komponenten (Krieger, Gegner/Wölfe, Bosse, Spielwelt, Gameplay, UI, Tests). GitHub ist die gemeinsame technische Quelle; Chats synchronisieren Änderungen nicht automatisch.
+Dieser Chat ist die **Hauptzentrale und technische Koordination** für Entscheidungen, Versionen und Integration. Der frühere Chat „mein game“ existiert nicht mehr. Weitere Projekt-Chats entwickeln abgegrenzte Komponenten (Krieger, Gegner/Wölfe, Bosse, Spielwelt, Gameplay, UI, Tests). GitHub ist die gemeinsame technische Quelle; Chats synchronisieren Änderungen nicht automatisch.
 
 ## 2. Verifizierter technischer Stand
 - `index.html` bindet `style.css?v=080` und `game.js?v=0113` ein.
@@ -29,7 +29,7 @@ Der ursprüngliche Chat **„mein game“** ist die **Hauptzentrale** für Entsc
 5. Neue Grafiken mit eindeutigen Namen, konsistenten Abmessungen, transparenten Hintergründen (wenn passend) und dokumentierten Animationszuständen liefern.
 6. Jede Änderung mit betroffenen Dateien, Funktionsweise, Abhängigkeiten und Teststatus dokumentieren.
 7. Keine nicht getestete Änderung als fehlerfrei bezeichnen.
-8. Konflikte oder Architekturentscheidungen an „mein game“ zur Entscheidung zurückgeben.
+8. Konflikte oder Architekturentscheidungen an die Hauptzentrale zur Entscheidung zurückgeben.
 
 ## 5. Übergabeformat an die Hauptzentrale
 - Bereich / Entwicklungs-Chat:
@@ -54,6 +54,6 @@ Der ursprüngliche Chat **„mein game“** ist die **Hauptzentrale** für Entsc
 - Exakte aktuelle Spielversion (Datei-Query-Parameter sind keine sichere Versionsangabe).
 - Vollständige Liste der 13 Animationsarten.
 - Endgültige Sprite-Masse, Frameraten, Grafikstil und Dateistruktur.
-- Aktuelle Roadmap und Prioritäten aus „mein game“.
+- Aktuelle Roadmap und Prioritäten aus dem vorhandenen Projektkontext.
 
-**Grundsatz:** Der reale Repository-Stand und die bestätigten Entscheidungen der Hauptzentrale haben Vorrang vor Annahmen aus Neben-Chats.
+**Grundsatz:** Der reale Repository-Stand und die bestätigten Entscheidungen des Game Directors und der Hauptzentrale haben Vorrang vor Annahmen aus Neben-Chats.
