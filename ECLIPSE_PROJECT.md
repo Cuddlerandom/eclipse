@@ -2,6 +2,10 @@
 Stand: 2026-10-16
 Repository: https://github.com/Cuddlerandom/eclipse
 
+
+## Verbindliche visuelle Richtung
+ECLIPSE orientiert sich stilistisch an **BALL x PIT**: hochwertige, gut lesbare Pixel-Art mit atmosphärischen Umgebungen, eigenständigen Sprites und stimmigen Effekten. Die Referenz betrifft ausschliesslich die visuelle Gestaltung, nicht Gameplay-Mechaniken oder das Kopieren fremder Grafiken. Die detaillierten Anforderungen stehen in `ECLIPSE_DESIGN.md`; alle Fach-Chats prüfen sie vor visueller Arbeit. Der Game Director genehmigt Vorschauen vor der Integration.
+
 ## Spiel und technische Grundlage
 ECLIPSE – Survivors ist ein browserbasiertes Action-Survivors-Spiel mit HTML, CSS und JavaScript/Canvas. Der aktuelle Code auf GitHub ist verbindlich.
 
