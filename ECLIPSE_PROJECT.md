@@ -57,3 +57,12 @@ Dieser Chat ist die **Hauptzentrale und technische Koordination** für Entscheid
 - Aktuelle Roadmap und Prioritäten aus dem vorhandenen Projektkontext.
 
 **Grundsatz:** Der reale Repository-Stand und die bestätigten Entscheidungen des Game Directors und der Hauptzentrale haben Vorrang vor Annahmen aus Neben-Chats.
+
+## Verbindliche Integrationsrechte für alle bestehenden und neuen Fach-Chats
+1. Jeder Fach-Chat darf seine eigenen Komponenten selbstständig entwickeln, in seinem eigenen Branch einbauen und dort testen. Einbau bedeutet **nicht** automatisch Freigabe für `main`.
+2. Vor der Arbeit aktuelle GitHub-Dateien `AGENTS.md`, `ECLIPSE_PROJECT.md`, `ECLIPSE_STATUS.md`, `ECLIPSE_DESIGN.md` und betroffene Quelldateien prüfen.
+3. Fach-Chats dürfen neue isolierte Dateien und Assets für ihren Bereich erstellen. Änderungen an gemeinsam genutzten Dateien (insbesondere `game.js`, `index.html`, `style.css`), öffentlichen Schnittstellen oder fremden Komponenten **vorher mit der Hauptzentrale abstimmen**; nicht eigenmächtig auf `main` schreiben.
+4. Für übergreifende Anpassungen eine konkrete Änderung samt betroffenen Dateien und Abhängigkeiten vorschlagen und auf Freigabe warten; bevorzugt Pull Request/Branch statt direkter Änderung der Hauptversion.
+5. Vor einer Übergabe eigene Tests dokumentieren und Commit/Branch/PR, Dateien, Schnittstellen, offene Fehler und Integrationsanleitung nennen. Ohne Nachweis kein Status „integriert“ oder „getestet“.
+6. Nur die Hauptzentrale koordiniert das Zusammenführen in `main`, prüft Konflikte und Regressionen und dokumentiert den Integrationsstatus in `ECLIPSE_STATUS.md`. Releases und grosse Architekturänderungen benötigen Koordination; kreative Entscheidungen trifft der Game Director.
+7. Diese Regeln gelten auch für **neu erstellte Chats**. Projektanweisungen sind der Einstieg; GitHub bleibt die aktuelle Wahrheit. Chats kommunizieren nicht automatisch miteinander.
