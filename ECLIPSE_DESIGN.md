@@ -1,6 +1,13 @@
 # ECLIPSE – Visuelle Designreferenz
 Stand: 2026-10-16
 
+
+## Verbindliche visuelle Stilreferenz
+- **BALL x PIT** ist die vom Game Director festgelegte Stilreferenz für ECLIPSE: detailreiche, gut lesbare Pixel-Art, ausdrucksstarke Umgebungen, stimmige Farbpaletten, klare Silhouetten und passende visuelle Effekte.
+- Dies ist eine **Stilrichtung**, keine Erlaubnis, Original-Sprites, geschützte Grafiken, Figuren oder Level aus BALL x PIT zu kopieren. ECLIPSE benötigt eigenständige Designs.
+- Der Stil gilt übergreifend für Spielwelt, Charaktere, Gegner, Animationen, Objekte und Effekte. Fach-Chats legen ihre visuellen Vorschauen dem Game Director vor; erst nach Freigabe erfolgt die Integration durch die Hauptzentrale.
+- Kapitel 1 bleibt Grasland. Boden, Bäume, Büsche, Felsen und andere Umgebungselemente müssen als zusammenhängende Pixel-Art-Welt gestaltet werden; alte unpassende Objekte dürfen nicht unbemerkt in die neue Welt übernommen werden. Gameplay-Kollisionen bleiben Sache der Hauptzentrale.
+
 ## Zuständigkeit
 Der Game Director bestätigt die kreative Richtung. Zugewiesene Fach-Chats erstellen Designs, Sprites, Animationen, visuelle Effekte und isolierte Vorschauen. Die Hauptzentrale übernimmt Gameplay-Mechaniken, technische Hitboxen und Integration.
 
