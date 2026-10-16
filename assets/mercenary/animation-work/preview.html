@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>ECLIPSE – Krieger B | isolierte Vorschau</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#0d1119;color:#f3eee5;font:15px system-ui,sans-serif}main{max-width:740px;margin:auto;padding:18px}h1{font-size:22px;margin:0 0 8px}p{line-height:1.5;color:#c9c7c2}.stage{position:relative;border:1px solid #5b554a;border-radius:14px;overflow:hidden;background:radial-gradient(circle at 50% 70%,#343c32,#171f23 68%)}canvas{width:100%;display:block;aspect-ratio:16/10;touch-action:none}.tag{position:absolute;left:12px;top:12px;background:#12151cdb;padding:6px 9px;border-radius:7px;font-size:12px}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}button{border:1px solid #827a6b;background:#252a32;color:#f8f0df;border-radius:9px;padding:12px 14px;cursor:pointer;font:inherit}button[aria-pressed=true]{background:#6a4836;border-color:#c99d71}button:focus-visible{outline:2px solid white}.note{font-size:13px;border-left:3px solid #c6a078;padding-left:12px}#status{font-size:13px;color:#ddd}</style></head>
+<body><main><h1>ECLIPSE · Söldner B</h1><p>Isolierte visuelle Testszene. Tippe auf eine Pose oder benutze die Pfeiltasten. <strong>Keine Gameplay-Simulation.</strong></p>
+<div class="stage"><canvas id="scene" width="800" height="500" aria-label="Vorschau des Söldners"></canvas><div class="tag">FACH-CHAT · VISUELLE VORSCHAU</div></div>
+<div class="controls" id="controls"><button data-pose="idle" aria-pressed="true">Stehen</button><button data-pose="run" aria-pressed="false">Laufen</button><button data-pose="attack" aria-pressed="false">Angriff</button><button data-pose="dodge" aria-pressed="false">Ausweichen</button><button data-pose="hit" aria-pressed="false">Treffer</button><button id="flip">↔ Richtung</button></div>
+<p id="status" role="status">Originalgrafik wird geladen …</p>
+<p class="note"><strong>Wichtig:</strong> Diese Vorschau zeigt das Originalbild mit zurückhaltenden Pose-Effekten, <em>keine fertigen Sprite-Animationen</em>. Animationstiming und Bewegungen sind ausschliesslich visuelle Platzhalter. Keine Hitboxen, Schäden, Geschwindigkeiten oder Spielmechaniken werden festgelegt. Die Originalgrafik wird derzeit über eine externe Adobe-URL geladen.</p>
+</main>
+<script>
+(()=>{'use strict';
+const canvas=document.getElementById('scene'),ctx=canvas.getContext('2d'),status=document.getElementById('status');
+const art=new Image();let loaded=false,failed=false,pose='idle',facing=1,t=0,last=0,keys=new Set();
+art.onload=()=>{loaded=true;status.textContent='Originalbild geladen. Du kannst die Posen auswählen.'};
+art.onerror=()=>{failed=true;status.textContent='Originalbild konnte nicht geladen werden. Die externe Adobe-Adresse ist möglicherweise abgelaufen.'};
+art.src='https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:64c0484d-6d3c-4ff7-a38b-bef3afceea5b';
+const buttons=[...document.querySelectorAll('[data-pose]')];
+function setPose(v){pose=v;t=0;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.pose===v)))}
+buttons.forEach(b=>b.addEventListener('click',()=>setPose(b.dataset.pose)));
+document.getElementById('flip').addEventListener('click',()=>{facing*=-1});
+window.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight',' '].includes(e.key))e.preventDefault();keys.add(e.key);if(e.key==='ArrowLeft'){facing=-1;setPose('run')}if(e.key==='ArrowRight'){facing=1;setPose('run')}if(e.key===' ')setPose('attack')});
+window.addEventListener('keyup',e=>{keys.delete(e.key);if((e.key==='ArrowLeft'||e.key==='ArrowRight')&&!keys.has('ArrowLeft')&&!keys.has('ArrowRight'))setPose('idle')});
+function frame(ms){const dt=Math.min(.05,(ms-last)/1000||0);last=ms;t+=dt;ctx.clearRect(0,0,800,500);
+ctx.fillStyle='#263029';ctx.fillRect(0,350,800,150);ctx.strokeStyle='#52614c';ctx.lineWidth=2;for(let i=0;i<800;i+=60){ctx.beginPath();ctx.moveTo(i,350);ctx.lineTo(i-55,500);ctx.stroke()}
+ctx.fillStyle='#0007';ctx.beginPath();ctx.ellipse(400,375,65,14,0,0,Math.PI*2);ctx.fill();
+if(loaded){let x=400,y=375,angle=0;const phase=t*10;
+if(pose==='idle')y+=Math.sin(t*2)*1.5;
+if(pose==='run'){x+=Math.sin(phase)*4;y-=Math.abs(Math.sin(phase))*4;angle=Math.sin(phase)*.012}
+if(pose==='attack'){angle=Math.sin(Math.min(t/.4,1)*Math.PI)*.07}
+if(pose==='dodge'){x+=Math.sin(Math.min(t/.55,1)*Math.PI)*20;angle=-.07}
+if(pose==='hit'){x-=Math.sin(Math.min(t/.4,1)*Math.PI)*8;angle=-.045}
+ctx.save();ctx.translate(x,y);ctx.scale(facing,1);ctx.rotate(angle);ctx.drawImage(art,-80,-220,160,220);ctx.restore();
+if(pose==='attack'&&t<.42){ctx.strokeStyle='#eacb91b0';ctx.lineWidth=5;ctx.beginPath();ctx.arc(x,y-120,105,-.95,.3);ctx.stroke()}
+}else{ctx.fillStyle='#e8d7b7';ctx.textAlign='center';ctx.font='18px system-ui';ctx.fillText(failed?'Originalgrafik nicht verfügbar':'Originalgrafik lädt …',400,230)}
+ctx.fillStyle='#f1e4c5';ctx.font='17px system-ui';ctx.textAlign='left';ctx.fillText('Pose: '+({idle:'Stehen',run:'Laufen',attack:'Angriff',dodge:'Ausweichen',hit:'Treffer'}[pose]),24,468);
+requestAnimationFrame(frame)}
+requestAnimationFrame(frame);
+})();
+</script></body></html>
