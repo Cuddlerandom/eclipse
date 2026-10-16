@@ -4,8 +4,8 @@ Diese Datei gilt als gemeinsamer Leitfaden für Arbeiten am Repository. Vor jede
 
 ## Rollen
 - **Game Director:** Nutzer; bestimmt kreative Richtung und Prioritäten.
-- **Hauptzentrale:** ursprünglicher Chat „mein game“; bestätigt übergreifende Entscheidungen, Roadmap und Releases.
-- **Technik-Chat:** koordiniert Architektur, Integration, Qualitätssicherung, Versionskonflikte und GitHub-Dokumentation.
+- **Hauptzentrale:** dieser Chat (Hauptzentrale und Technik); bestätigt übergreifende Entscheidungen, Roadmap und Releases.
+- **Hauptzentrale / Technik:** koordiniert Architektur, Integration, Qualitätssicherung, Versionskonflikte und GitHub-Dokumentation.
 - **Fach-Chats:** z. B. Krieger, Wölfe, Bosse, Spielwelt, Gameplay, UI; arbeiten an klar abgegrenzten Komponenten.
 
 ## Verbindlicher Ablauf
@@ -15,7 +15,7 @@ Diese Datei gilt als gemeinsamer Leitfaden für Arbeiten am Repository. Vor jede
 4. Vorhandenes Spielverhalten und Originaldesigns bewahren, sofern keine ausdrückliche Änderung beschlossen wurde.
 5. Änderungen auf Fehler, mobile Darstellung, Performance, Steuerung und Animationen prüfen; ungeprüfte Funktionen nicht als getestet bezeichnen.
 6. Nach jeder Arbeit einen Übergabebericht liefern: Ziel, Dateien, Änderungen, Schnittstellen, Teststatus, Probleme und Commit/PR.
-7. Integrations- und Architekturkonflikte an den Technik-Chat geben; grundlegende Designentscheidungen an „mein game“.
+7. Integrations- und Architekturkonflikte an diesen Hauptzentrale-/Technik-Chat geben; grundlegende kreative Entscheidungen an den Game Director.
 8. Keine eigenmächtigen Releases oder umfangreichen Umstrukturierungen.
 
 ## Technischer Kontext
