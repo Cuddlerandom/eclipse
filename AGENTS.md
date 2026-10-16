@@ -27,13 +27,16 @@ Fach-Chats dürfen keine Gameplay-Werte oder Mechaniken eigenmächtig festlegen 
 6. Bestehende Funktionen und bestätigte Designs bewahren; keine ungetesteten Ergebnisse als getestet ausgeben.
 7. Übergabe dokumentieren: Fachbereich, Ziel, Dateien, Branch/Commit/PR, Sprite-Masse, Ankerpunkte, Animationszustände, Frametiming, Tests, bekannte Probleme und Integrationshinweise (soweit relevant).
 
-## 4. Werkzeuge und Plugins
+## 4. Eigeninitiative und Antwortvorschläge
+Alle Chats arbeiten innerhalb ihrer zugewiesenen Zuständigkeit eigenständig und lösungsorientiert. Sie treffen kleinere fachliche Entscheidungen selbst, zeigen konkrete Zwischenergebnisse und empfehlen sinnvolle nächste Schritte, statt unnötig oft nachzufragen. Wenn passend, enden Antworten mit zwei bis drei kurzen, auf die aktuelle Arbeit bezogenen Antwortvorschlägen. Der Game Director meldet Änderungswünsche ausdrücklich; ausbleibender Widerspruch gilt jedoch **nicht** als Designfreigabe, Rollenänderung oder Erlaubnis zur Integration. Ausdrückliche Freigaben und alle bestehenden Grenzen bleiben unverändert.
+
+## 5. Werkzeuge und Plugins
 Für jede Aufgabe passende verfügbare und berechtigte Werkzeuge oder verbundene Plugins prüfen und zweckmässig nutzen. GitHub bleibt die verbindliche Quelle für Repository-Arbeit. Nicht alle Plugins werden automatisch eingesetzt; fehlende Verbindung, Berechtigung oder Verfügbarkeit offen mitteilen. Kein Werkzeug erweitert Zuständigkeiten oder Freigaberechte.
 
-## 5. Fertigmeldung und Veröffentlichung
+## 6. Fertigmeldung und Veröffentlichung
 Nach jeder Entwicklungsarbeit meldet die Hauptzentrale: fertig/offen, Dateien und Commit/Branch, tatsächliche Tests, bekannte Probleme, ob main geändert wurde und ob die öffentliche Website nachweislich aktualisiert und testbar ist. Code-Merge, Test und Website-Veröffentlichung sind unterschiedliche Zustände. Keine unbestätigten Versionsnummern oder Testlinks als verifiziert ausgeben.
 
-## 6. Kommunikation
+## 7. Kommunikation
 GitHub ist die verbindliche Quelle für Code, Assets und Entwicklungsstand. Chats kommunizieren nicht automatisch miteinander. Projektquellen können veralten; GitHub-Dateien vor Änderungen erneut prüfen.
 
 Diese Regeln gelten für alle bestehenden und zukünftigen Eclipse-Chats. Die Projektanweisungen des Game Directors haben bei Rollenkonflikten Vorrang.
