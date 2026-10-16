@@ -133,3 +133,20 @@
 .spec-select>strong{font-size:13px;text-align:left}
 .spec-select>p{text-align:left;line-height:1.45}
 @media(max-width:390px){.career-progress>strong{font-size:12px}.career-progress>span{font-size:11px}}
+
+/* v0.78: compact fantasy HUD, no layout or gameplay changes */
+#hudLeft,#hudRight{background:linear-gradient(155deg,#352b20f2,#171e20ed 65%,#111b1df2);border:1px solid #ae8a52;box-shadow:inset 0 0 0 1px #e2c28c22,0 3px 12px #0009;border-radius:9px}
+#hudLeft{border-left:3px solid #c4a46b}#hudRight{border-right:3px solid #c4a46b}
+#hudLeft #info{color:#f2dfb3;letter-spacing:.6px;text-shadow:0 1px 2px #000}
+#hudLeft .stat-bar{background:#100f0ce8;border:1px solid #927954;border-radius:5px;box-shadow:inset 0 1px 4px #000c;height:16px}
+.stat-bar #hp,.stat-bar #xp{background:#191b1b;border-radius:4px}
+.stat-bar #hp:before{background:linear-gradient(180deg,#ff9a82 0%,#d63b45 45%,#922831 100%);box-shadow:inset 0 1px 1px #ffd6bd80}
+.stat-bar #xp:before{background:linear-gradient(180deg,#b2f6ff 0%,#39b9f1 40%,#246cae 100%);box-shadow:inset 0 1px 1px #dcffff88}
+#hudLeft .stat-bar span{color:#fff5df;font-size:10px;text-shadow:0 1px 3px #000,0 0 3px #000}
+#hudRight #goldCount{background:linear-gradient(135deg,#57401f,#2b2119);border:1px solid #d4ad63;color:#ffe3a2;border-radius:6px;box-shadow:inset 0 1px 0 #ffe3a12c,0 0 10px #ffc75b20}
+#hudRight #waveStatus{color:#f0d7a4;letter-spacing:.6px;text-shadow:0 1px 2px #000}
+#hudRight #timer{background:linear-gradient(#342a20f5,#191e20f5);border:1px solid #c2a16a;color:#fff0cc;box-shadow:0 2px 9px #0008,inset 0 1px 0 #eac88c33;border-radius:6px}
+#statsButton{background:linear-gradient(160deg,#493827ed,#201e1bed);border:1px solid #b99760;color:#f6e2b9;box-shadow:0 3px 10px #0009;border-radius:7px}
+#dash{background:radial-gradient(circle at 35% 25%,#596a73,#253742 70%);border:2px solid #b69a6a;color:#f6e8c8;box-shadow:inset 0 0 0 2px #111b21aa,0 2px 12px #0009}
+#stick{border-color:#ad956e;background:#292e2b66;box-shadow:inset 0 0 0 3px #181b1c55,0 2px 12px #0006}
+#knob{background:radial-gradient(circle at 30% 25%,#c2c6b7,#62716d 80%);border:2px solid #d4bd91;box-shadow:0 2px 7px #0009}
