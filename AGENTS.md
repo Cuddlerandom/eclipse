@@ -39,3 +39,12 @@ ChatGPT-Projekt-Chats kommunizieren nicht automatisch miteinander. Diese Datei v
 5. Vor einer Übergabe eigene Tests dokumentieren und Commit/Branch/PR, Dateien, Schnittstellen, offene Fehler und Integrationsanleitung nennen. Ohne Nachweis kein Status „integriert“ oder „getestet“.
 6. Nur die Hauptzentrale koordiniert das Zusammenführen in `main`, prüft Konflikte und Regressionen und dokumentiert den Integrationsstatus in `ECLIPSE_STATUS.md`. Releases und grosse Architekturänderungen benötigen Koordination; kreative Entscheidungen trifft der Game Director.
 7. Diese Regeln gelten auch für **neu erstellte Chats**. Projektanweisungen sind der Einstieg; GitHub bleibt die aktuelle Wahrheit. Chats kommunizieren nicht automatisch miteinander.
+
+## Verbindliche Trennung: Design-Fach-Chats und Gameplay-Hauptzentrale
+**Entscheidung des Game Directors (2026-10-16):** Bestehende Fach-Chats (Krieger, Wölfe, Bosse, Spielwelt und weitere visuelle Fachbereiche) sind ausschliesslich für visuelle Gestaltung, Sprites, Animationen, Art-Assets und visuelle Effekte zuständig. Sie dürfen dafür eigene Assets und isolierte Vorschauen/Test-Harnesses in separaten Branches entwickeln und testen.
+
+**Ausschliesslich Hauptzentrale/Technik:** HP, Schaden, Rüstung, Tempo, Angriffsradius, Abklingzeiten, Hitbox-/Kollisionslogik, Gegner-KI, Spawnverhalten, XP, Gold, Drops, Progression, Fähigkeiten, Schwierigkeit, Balancing, Gameplay-Code und Einbindung in die spielbare Hauptversion. Keine eigenmächtige Änderung dieser Werte oder Mechaniken durch Design-Chats.
+
+Design-Chats dürfen für reine Animationsvorschauen unverbindliche Dummy-Werte nutzen, müssen diese als Platzhalter kennzeichnen und dürfen sie nicht in die Hauptspielmechanik übernehmen. Animationsmetadaten (Framezahl, Timing, Bildmasse, Ankerpunkte, grafische Treffer-/Effektmarker) dürfen vorgeschlagen werden; die Hauptzentrale entscheidet über Gameplay-Schnittstellen, aktive Hitboxen und Balance.
+
+Jede Übergabe enthält Asset-Pfade, Vorschau, Sprite-Masse, Ankerpunkte, Animationszustände, Frametiming, Branch/Commit und Teststatus. Fach-Chats dürfen `game.js`, `index.html`, `style.css` und Gameplay-Module ohne vorherige explizite Freigabe nicht verändern; keine eigenmächtigen Merges in `main`. Auch neue Fach-Chats unterliegen dieser Regel. Die kreative Freigabe liegt beim Game Director.
