@@ -1,0 +1,56 @@
+{
+  "character": "mercenary_b",
+  "status": "work_in_progress_not_game_ready",
+  "source": "Adobe extraction of generated reference atlas",
+  "animation": "run",
+  "frames": [
+    {
+      "index": 0,
+      "adobe_preview": "https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:564dc0d7-d941-4848-81cd-407f7c6752a1",
+      "approved": false
+    },
+    {
+      "index": 1,
+      "adobe_preview": "https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:cbe13813-4021-43c4-ab5d-55e8d9bb30aa",
+      "approved": false
+    },
+    {
+      "index": 2,
+      "adobe_preview": "https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:10941b01-15d0-4372-9d89-095fbf0d6e2a",
+      "approved": false
+    },
+    {
+      "index": 3,
+      "adobe_preview": "https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:ec26a90e-89a2-4ca6-b668-7018cbb50770",
+      "approved": false
+    },
+    {
+      "index": 4,
+      "adobe_preview": "https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:16141765-634c-4b61-b2ec-17ab5c90b158",
+      "approved": false
+    },
+    {
+      "index": 5,
+      "adobe_preview": "https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:842fbc77-3f89-43cb-8cd5-c6027c5dd4a1",
+      "approved": false
+    },
+    {
+      "index": 6,
+      "adobe_preview": "https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:8f17887f-4a2c-46f4-b42d-1f5d80abea1d",
+      "approved": false
+    },
+    {
+      "index": 7,
+      "adobe_preview": "https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:9e2c1303-3c35-4218-9dfc-79fa5e64ed96",
+      "approved": false
+    }
+  ],
+  "required_before_integration": [
+    "Verify all eight poses contain the entire figure and cloak",
+    "Clean alpha masks and remove frame numbers or background residues",
+    "Match sprite height and align feet on identical baseline",
+    "Verify chronological leg motion; generated poses may not form a coherent loop",
+    "Export stable local PNG assets to repository; Adobe short URLs must not be used as production image sources",
+    "Only then replace current character animation"
+  ]
+}
