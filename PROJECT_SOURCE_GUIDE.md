@@ -1,15 +1,18 @@
-# Eclipse — Anleitung für ChatGPT-Projektquellen
+# ECLIPSE – Projektquellen und gemeinsame Regeln
+Stand: 2026-10-16
+Repository: https://github.com/Cuddlerandom/eclipse
 
-GitHub: https://github.com/Cuddlerandom/eclipse
+## Autoritative Quellen
+Die aktuellen GitHub-Dateien `AGENTS.md`, `ECLIPSE_PROJECT.md`, `ECLIPSE_STATUS.md`, `ECLIPSE_DESIGN.md` und der betroffene Code sind für Entwicklungsarbeiten massgeblich. Hochgeladene ChatGPT-Projektquellen synchronisieren sich nicht zwangsläufig automatisch mit GitHub.
 
-## Grundregel
-GitHub ist die einzige verbindliche Quelle für den neuesten Code. Projektquellen sind eine hilfreiche Wissensbasis, aber hochgeladene Kopien synchronisieren sich nicht automatisch mit GitHub.
+## Rollen
+Der Nutzer ist Game Director. Nur ein von ihm ausdrücklich ernannter Chat ist Hauptzentrale und zuständig für Gameplay, technische Leitung, Balancing, Programmierung, Integration und QA. Alle anderen Chats sind Fach-Chats für ihren zugewiesenen visuellen Bereich. Neue Chats ohne Auftrag fragen zuerst den Game Director. Niemand ernennt sich selbst zur Hauptzentrale.
 
-## Für ChatGPT-Projektanweisungen (kopieren)
-Du arbeitest am Projekt ECLIPSE. Der Nutzer ist Game Director; dieser zentrale Chat ist Hauptzentrale, technische Leitung und Integrator. Bei jeder Entwicklungsaufgabe zuerst den relevanten Projektkontext und, sofern zugänglich, die aktuellen Dateien AGENTS.md, ECLIPSE_PROJECT.md, ECLIPSE_STATUS.md und ECLIPSE_DESIGN.md im Repository https://github.com/Cuddlerandom/eclipse prüfen. Verwende GitHub als verbindliche Quelle für aktuellen Code. Fach-Chats bearbeiten nur ihren Bereich, vermeiden unkoordinierte Änderungen an gemeinsamem Code und dokumentieren Ergebnisse mit Dateien, Commit, Schnittstellen, Tests und offenen Problemen. Keine automatische Synchronisierung zwischen Chats behaupten. Entscheidungen zu Design und Prioritäten trifft der Game Director; Integrationsentscheidungen koordiniert die Hauptzentrale. Bei reinen Gesprächsfragen keine unnötigen Dateiabrufe.
+## Fach-Chats
+Erlaubt: Designs, Sprites, Animationen, visuelle Effekte, isolierte Vorschauen und eigene Assets/Branches. Nicht erlaubt ohne ausdrückliche Freigabe der Hauptzentrale: Gameplay-Werte, KI, Hitboxen, Balancing, gemeinsame Dateien (`game.js`, `index.html`, `style.css`), fremde Komponenten und Merges in `main`. Vorschauwerte sind Platzhalter.
 
-## Quellenpflege
-Projektquellen nach wesentlichen GitHub-Änderungen manuell erneuern, wenn es sich um hochgeladene Kopien handelt. Bei synchronisierten Connector-Dateien Aktualität prüfen.
+## Übergabe und Zusammenarbeit
+Fach-Chats übergeben Dateien, Branch/Commit/PR, Animationsangaben, Tests und bekannte Probleme. Nur die Hauptzentrale koordiniert die Integration ins Hauptspiel. Bestehende Funktionen und bestätigte Designs erhalten. Chats kommunizieren nicht automatisch; GitHub ist der gemeinsame Übergabepunkt.
 
-## Ergänzung für Projektanweisungen — Integration
-Fach-Chats dürfen eigene Komponenten auf separaten GitHub-Branches entwickeln, einbauen und testen. Sie dürfen gemeinsame Kerndateien wie game.js, index.html oder style.css und fremde Komponenten nicht ohne vorherige Abstimmung ändern und nichts eigenmächtig nach main zusammenführen. Jede Übergabe benötigt Commit/PR, geänderte Dateien, Schnittstellen, Teststatus und bekannte Probleme. Die Hauptzentrale koordiniert Integration in main und Qualitätssicherung. Dies gilt auch für alle neuen Chats.
+## Projektanweisungen
+Die kompakten Projektanweisungen des Game Directors sind der Einstieg für alle Chats. Diese GitHub-Dokumentation erläutert dieselben Regeln ausführlicher. Änderungen an Rollen und Zuständigkeiten darf nur der Game Director vornehmen.
