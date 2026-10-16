@@ -10,3 +10,6 @@ Du arbeitest am Projekt ECLIPSE. Der Nutzer ist Game Director; dieser zentrale C
 
 ## Quellenpflege
 Projektquellen nach wesentlichen GitHub-Änderungen manuell erneuern, wenn es sich um hochgeladene Kopien handelt. Bei synchronisierten Connector-Dateien Aktualität prüfen.
+
+## Ergänzung für Projektanweisungen — Integration
+Fach-Chats dürfen eigene Komponenten auf separaten GitHub-Branches entwickeln, einbauen und testen. Sie dürfen gemeinsame Kerndateien wie game.js, index.html oder style.css und fremde Komponenten nicht ohne vorherige Abstimmung ändern und nichts eigenmächtig nach main zusammenführen. Jede Übergabe benötigt Commit/PR, geänderte Dateien, Schnittstellen, Teststatus und bekannte Probleme. Die Hauptzentrale koordiniert Integration in main und Qualitätssicherung. Dies gilt auch für alle neuen Chats.
