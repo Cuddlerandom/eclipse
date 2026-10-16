@@ -1,0 +1,80 @@
+{
+  "asset": "goblin_grassland_plunderer",
+  "status": "prototype_not_final",
+  "frameSize": [
+    64,
+    64
+  ],
+  "anchor": [
+    32,
+    57
+  ],
+  "sheetLayout": "horizontal",
+  "animations": {
+    "idle": {
+      "path": "assets/goblin/animation-work/goblin_idle.png",
+      "frames": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameDurationMs": 180,
+      "anchor": [
+        32,
+        57
+      ],
+      "loop": true,
+      "gifPreview": "assets/goblin/animation-work/goblin_idle.gif"
+    },
+    "run": {
+      "path": "assets/goblin/animation-work/goblin_run.png",
+      "frames": 6,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameDurationMs": 100,
+      "anchor": [
+        32,
+        57
+      ],
+      "loop": true,
+      "gifPreview": "assets/goblin/animation-work/goblin_run.gif"
+    },
+    "attack": {
+      "path": "assets/goblin/animation-work/goblin_attack.png",
+      "frames": 6,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameDurationMs": 90,
+      "anchor": [
+        32,
+        57
+      ],
+      "loop": false,
+      "gifPreview": "assets/goblin/animation-work/goblin_attack.gif"
+    },
+    "hit": {
+      "path": "assets/goblin/animation-work/goblin_hit.png",
+      "frames": 3,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameDurationMs": 110,
+      "anchor": [
+        32,
+        57
+      ],
+      "loop": false,
+      "gifPreview": "assets/goblin/animation-work/goblin_hit.gif"
+    },
+    "death": {
+      "path": "assets/goblin/animation-work/goblin_death.png",
+      "frames": 5,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameDurationMs": 150,
+      "anchor": [
+        32,
+        57
+      ],
+      "loop": false,
+      "gifPreview": "assets/goblin/animation-work/goblin_death.gif"
+    }
+  }
+}
