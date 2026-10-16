@@ -35,3 +35,10 @@ Verantwortlich für den Gesamtstatus: Hauptzentrale.
 Geplant → in Entwicklung → Design/Asset fertig → isoliert getestet → zur Integration bereit → durch Hauptzentrale in `main` integriert → im Gesamtspiel getestet.
 
 Nur verifizierte Übergaben, Commits und Tests als abgeschlossen markieren. Nach jeder Übergabe betroffene Dateien, Commit, offene Probleme und Integrationsstatus dokumentieren.
+
+## Goblin – vorläufige visuelle Integration (2026-10-16)
+- Fach-Branch `feature/goblin-assets`: fünf PNG-Sprite-Sheets, fünf GIFs und sechs Vorschau-PNGs auf GitHub vorhanden; ursprüngliche Animationsprototypen sind **nicht endgültig designfreigegeben**.
+- Hauptzentrale: `game.js` zeichnet bei Gegner-Typ `normal` vorläufig Goblin-Spriteframes (Run, Attack, Hit), mit Fallback zur alten Darstellung. Die Sprites werden zurzeit per `raw.githubusercontent.com` aus dem Fach-Branch geladen; das ist eine technische Zwischenlösung, **keine endgültige Asset-Übernahme nach main**.
+- `index.html` Cache-Query für `game.js` aktualisiert. Bestehende Gameplay-Werte, KI, Hitboxen, Spawnlogik nicht absichtlich verändert.
+- Offene Arbeit: Bilder als lokale Assets auf `main` übernehmen, Animationen optisch überprüfen, Browser-/iPhone-Laufzeit prüfen, Animationen künstlerisch verfeinern, weitere Zustände (Idle/Death) im Spielablauf sauber anbinden.
+- **Nicht durchgeführt:** Browser-Laufzeittest, iPhone-Test, öffentliche Website-/Deployment-Verifikation. Ein Commit beweist keine erfolgreiche Veröffentlichung.
