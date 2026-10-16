@@ -24,13 +24,13 @@ anim.setState('run'); anim.face(1); anim.update(dt);
 const frame = anim.sample();
 drawMercenaryFrame(ctx, atlasImage, frame, {x:player.x,y:player.y,frameWidth:96,frameHeight:112,anchorX:48,anchorY:104});
 ```
-Die Pixelwerte sind **Beispielwerte**, keine final bestätigte Sprite-Geometrie. Das Atlas-Layout besteht aus horizontalen Reihen in Reihenfolge `idle,run,attack,dodge,hit,death`. Frame 0 steht links; alle Zellen gleich gross. Fussanker pro Zelle gleich. Rendering verändert keine Körperteile. `update(dt)` erwartet Sekunden und begrenzt grosse Einzelschritte auf 0,1 s. Zustandswechsel müssen vom vorhandenen Gameplay gesetzt werden; nicht automatisch.
+Die Pixelwerte sind **Beispielwerte**, keine final bestätigte Sprite-Geometrie. Das Atlas-Layout besteht aus horizontalen Reihen in Reihenfolge `idle,run,attack,dodge,hit,death`. Frame 0 steht links; alle Zellen gleich gross. Fussanker pro Zelle gleich. Rendering verändert keine Körperteile. `update(dt)` erwartet Sekunden und verarbeitet die volle verstrichene Zeit (auch bei Framerate-Einbrüchen). Zustandswechsel müssen vom vorhandenen Gameplay gesetzt werden; nicht automatisch.
 
 Vorgeschlagene, **nicht final bestätigte** Clips: idle 8×8 FPS loop, run 8×12 FPS loop, attack 8×24 FPS, dodge 8×24 FPS, hit 4×16 FPS, death 12×12 FPS.
 
 ## Tests
 - **Bestanden:** Modul-Logiktest in isolierter JavaScript-Ausführung: initial idle, Run-Fortschritt und Loop, Blickrichtung, Attack-Ende, Restart, negative Zeitdifferenz, Clipdaten, Atlas-Ausschnitt, Spiegelung und fehlender Atlas.
-- **Nicht durchgeführt:** Browserintegration, iPhone Safari, Bildqualität, Rendering echter Sprite-Atlanten, Lasttest.
+- **Zusätzlich bestanden (2026-10-16):** Grosse Zeitdifferenzen werden vollständig verarbeitet, ungültige Atlas-Frame-Indizes werden zurückgewiesen.\n- **Nicht durchgeführt:** Browserintegration, iPhone Safari, Bildqualität, Rendering echter Sprite-Atlanten, Lasttest.
 
 ## Bekannte Probleme / Blocker
 1. Der Söldner in `game.js` nutzt noch eine externe Adobe-Short-URL und ein Einzelbild.
@@ -48,6 +48,6 @@ Vorgeschlagene, **nicht final bestätigte** Clips: idle 8×8 FPS loop, run 8×12
 
 ## Commits
 - Modul: `372106c`
-- Tests: `5e92e33`, korrigiert `3b8a08f`
+- Tests: `5e92e33`, korrigiert `3b8a08f`\n- Frametiming-/Frame-Grenzen-Fix: `fb694f7`\n- Erweiterte Tests: `c6c54d9`
 
 **Keine eigenmächtige Integration oder Release durch den Krieger-Fach-Chat.**
