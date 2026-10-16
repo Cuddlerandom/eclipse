@@ -1,0 +1,232 @@
+{
+  "version": "0.7-visual-review",
+  "status": "awaiting Game Director design approval",
+  "frameWidth": 64,
+  "frameHeight": 64,
+  "anchor": {
+    "x": 32,
+    "y": 60
+  },
+  "pixelArt": true,
+  "imageSmoothingEnabled": false,
+  "animations": {
+    "idle": {
+      "frames": 4,
+      "frameDurationMs": 180,
+      "loop": true,
+      "sheet": "sheets/goblin_idle.png",
+      "files": [
+        "frames/goblin_idle_00.png",
+        "frames/goblin_idle_01.png",
+        "frames/goblin_idle_02.png",
+        "frames/goblin_idle_03.png"
+      ],
+      "frameRects": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 64,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 128,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 192,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        }
+      ]
+    },
+    "run": {
+      "frames": 6,
+      "frameDurationMs": 100,
+      "loop": true,
+      "sheet": "sheets/goblin_run.png",
+      "files": [
+        "frames/goblin_run_00.png",
+        "frames/goblin_run_01.png",
+        "frames/goblin_run_02.png",
+        "frames/goblin_run_03.png",
+        "frames/goblin_run_04.png",
+        "frames/goblin_run_05.png"
+      ],
+      "frameRects": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 64,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 128,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 192,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 256,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 320,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        }
+      ]
+    },
+    "attack": {
+      "frames": 6,
+      "frameDurationMs": 90,
+      "loop": true,
+      "sheet": "sheets/goblin_attack.png",
+      "files": [
+        "frames/goblin_attack_00.png",
+        "frames/goblin_attack_01.png",
+        "frames/goblin_attack_02.png",
+        "frames/goblin_attack_03.png",
+        "frames/goblin_attack_04.png",
+        "frames/goblin_attack_05.png"
+      ],
+      "frameRects": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 64,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 128,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 192,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 256,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 320,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        }
+      ]
+    },
+    "hit": {
+      "frames": 3,
+      "frameDurationMs": 110,
+      "loop": true,
+      "sheet": "sheets/goblin_hit.png",
+      "files": [
+        "frames/goblin_hit_00.png",
+        "frames/goblin_hit_01.png",
+        "frames/goblin_hit_02.png"
+      ],
+      "frameRects": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 64,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 128,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        }
+      ]
+    },
+    "death": {
+      "frames": 5,
+      "frameDurationMs": 150,
+      "loop": false,
+      "sheet": "sheets/goblin_death.png",
+      "files": [
+        "frames/goblin_death_00.png",
+        "frames/goblin_death_01.png",
+        "frames/goblin_death_02.png",
+        "frames/goblin_death_03.png",
+        "frames/goblin_death_04.png"
+      ],
+      "frameRects": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 64,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 128,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 192,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 256,
+          "y": 0,
+          "w": 64,
+          "h": 64
+        }
+      ]
+    }
+  }
+}
