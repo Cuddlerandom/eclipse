@@ -20,7 +20,7 @@ export class MercenaryAnimator {
     return this;
   }
   face(x){if(Number.isFinite(x)&&Math.abs(x)>.01)this.facing=x<0?-1:1;return this;}
-  update(dt){if(Number.isFinite(dt)&&dt>0)this.elapsed+=Math.min(dt,.1);return this;}
+  update(dt){if(Number.isFinite(dt)&&dt>0)this.elapsed+=dt;return this;}
   sample(){
     const clip=this.clips[this.state],total=clip.frames/clip.fps;
     const time=clip.loop?this.elapsed%total:clamp(this.elapsed,0,total);
@@ -36,7 +36,7 @@ export class MercenaryAnimator {
 export function drawMercenaryFrame(ctx,atlas,frame,{x,y,frameWidth,frameHeight,anchorX=frameWidth/2,anchorY=frameHeight,scale=1}){
   if(!ctx||!atlas||!frame||!Number.isFinite(scale)||scale<=0)return false;
   const row=MERCENARY_STATES.indexOf(frame.state);
-  if(row<0||!Number.isInteger(frame.index)||frame.index<0||!Number.isFinite(frameWidth)||!Number.isFinite(frameHeight)||frameWidth<=0||frameHeight<=0)return false;
+  if(row<0||!Number.isInteger(frame.index)||frame.index<0||frame.index>=MERCENARY_CLIPS[frame.state].frames||!Number.isFinite(frameWidth)||!Number.isFinite(frameHeight)||frameWidth<=0||frameHeight<=0)return false;
   ctx.save();ctx.translate(x,y);ctx.scale(frame.facing<0?-scale:scale,scale);
   ctx.drawImage(atlas,frame.index*frameWidth,row*frameHeight,frameWidth,frameHeight,-anchorX,-anchorY,frameWidth,frameHeight);
   ctx.restore();return true;
