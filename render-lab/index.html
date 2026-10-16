@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111a19">
+  <title>ECLIPSE – Warrior Render Lab</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">ECLIPSE · ISOLIERTER PROTOTYP</p>
+      <h1>Warrior Render Lab</h1>
+      <p>Technische Testumgebung für den freigegebenen Krieger. Kein Gameplay und keine Änderungen an der Hauptversion.</p>
+    </header>
+    <section class="stage" aria-labelledby="stage-title">
+      <div class="stage-heading">
+        <h2 id="stage-title">Produktionsgrafik</h2>
+        <span id="status" class="status" role="status">Asset-Prüfung läuft …</span>
+      </div>
+      <canvas id="preview" width="480" height="360" aria-label="Darstellungsfläche für das freigegebene Krieger-Asset"></canvas>
+      <p id="detail" class="detail">Die Vorschau lädt ausschließlich verifizierte Produktionsdateien. Es wird keine Ersatzgrafik gezeichnet.</p>
+    </section>
+    <section class="diagnostics">
+      <h2>Technische Diagnose</h2>
+      <dl>
+        <div><dt>Renderer</dt><dd>Canvas 2D · image smoothing aus</dd></div>
+        <div><dt>Animation</dt><dd id="animation-status">Wartet auf freigegebene Frames</dd></div>
+        <div><dt>Assets</dt><dd id="asset-status">Noch nicht verifiziert</dd></div>
+        <div><dt>Gameplay</dt><dd>Nicht geladen / nicht verändert</dd></div>
+      </dl>
+    </section>
+    <footer>Render Lab · isolierter Entwicklungsstand · keine Produktionsfreigabe</footer>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
