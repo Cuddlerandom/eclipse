@@ -1,6 +1,10 @@
 # ECLIPSE – Verbindliche Entwicklungsregeln
 Stand: 2026-10-16
 
+
+## Verbindliche Stilreferenz
+Für sämtliche visuellen Fachbereiche ist **BALL x PIT** die vom Game Director bestimmte Stilreferenz (detailreiche, lesbare Pixel-Art und einheitliche Gestaltung). Nur als Inspiration verwenden; keine fremden Assets kopieren. Verbindliche Einzelheiten stehen in `ECLIPSE_DESIGN.md`. Vor Integration neuer visueller Assets ist die Freigabe des Game Directors einzuholen.
+
 ## 1. Rollenidentifikation
 - **Game Director:** Der Nutzer entscheidet über Spielvision, Designs, Prioritäten und Zuständigkeiten.
 - **Hauptzentrale:** Ausschliesslich der Chat, den der Game Director ausdrücklich dazu bestimmt hat. Dieser Chat koordiniert Technik, Gameplay, Balancing, Integration und Qualitätssicherung.
