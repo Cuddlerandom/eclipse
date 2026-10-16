@@ -7,7 +7,7 @@
     56
   ],
   "preview_only": true,
-  "note": "V5 prototypes; PNG binaries NOT uploaded to GitHub",
+  "note": "All six real PNG sprite sheets uploaded to this branch; prototype visual quality, no gameplay integration.",
   "animations": {
     "idle": {
       "path": "wolf-assets/sprites/idle.png",
