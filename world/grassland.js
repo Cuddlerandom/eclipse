@@ -1,0 +1,1 @@
+(function(root){'use strict';function createGrassland(){return {render:function(ctx,cx,cy,w,h,t){ctx.save();ctx.fillStyle='#70aa4e';ctx.fillRect(cx,cy,w,h);ctx.restore();}}}root.EclipseGrassland={createGrassland};})(window);
