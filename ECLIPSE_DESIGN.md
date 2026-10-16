@@ -1,17 +1,28 @@
-# ECLIPSE — Designreferenz
-Stand: 2026-10-16.
+# ECLIPSE – Visuelle Designreferenz
+Stand: 2026-10-16
 
-## Bestätigte Richtung
-- ECLIPSE – Survivors: actionorientiertes Canvas-Spiel.
-- Krieger-Design B aus der bisherigen Entwicklung erhalten, nicht ungefragt neu gestalten.
-- Flüssige Bewegungen und Angriffe mit konsistenten Sprite-Frames.
-- Laufbewegung ohne unerwünschte Wellenbewegung.
-- Kein unerwünschtes weisses Samurai-Schwert.
-- Wölfe und künftige Gegner sollen zur gemeinsamen visuellen Sprache passen.
+## Zuständigkeit
+Der Game Director bestätigt die kreative Richtung. Zugewiesene Fach-Chats erstellen Designs, Sprites, Animationen, visuelle Effekte und isolierte Vorschauen. Die Hauptzentrale übernimmt Gameplay-Mechaniken, technische Hitboxen und Integration.
 
-## Noch nicht verbindlich dokumentiert
-- Originalgrafikdateien und Sprite-Atlas.
-- Exakte 13 Animationsarten, Frameraten, Bildgrössen, Ankerpunkte.
-- Farbpalette, Level-Biome und finaler Artstyle.
+## Bisherige Designrichtung und Prüfpunkte
+- Krieger-Design B ist die bisherige Referenz; vor Änderungen Original-Assets und Freigabe prüfen.
+- Flüssige, gut erkennbare Bewegungs- und Kampfanimationen mit konsistenten Frames.
+- Unerwünschte wellenförmige Laufbewegung vermeiden.
+- Unerwünschtes weisses Samurai-Schwert nicht einführen.
+- Wölfe und weitere Gegner sollen visuell zur Spielwelt passen.
 
-Neue Fach-Chats müssen fehlende Details aus echten Dateien oder einer Entscheidung des Game Directors ermitteln; keine Spezifikationen erfinden.
+## Anforderungen an Asset-Übergaben
+- Eindeutige Dateinamen und Pfade.
+- Sprite-Masse, Ankerpunkte, Animationszustände, Framezahl und Frametiming.
+- Falls sinnvoll: transparente Hintergründe und visuelle Effektmarker.
+- Isolierte Vorschau, Tests und bekannte Probleme.
+- Branch/Commit/PR für die Hauptzentrale.
+
+Animierte Treffer-Effekte oder Vorschau-Hitboxen definieren keine tatsächlichen Gameplay-Hitboxen. Testwerte sind Platzhalter.
+
+## Noch nicht verifiziert
+- Originaldateien und Sprite-Atlas.
+- Vollständige Liste der früher diskutierten 13 Animationsarten.
+- Endgültige Masse, Frameraten, Farbpalette und Level-Biome.
+
+Keine dieser offenen Angaben eigenmächtig als bestätigt dokumentieren.
