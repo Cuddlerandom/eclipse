@@ -1,18 +1,25 @@
-# Goblin animation work – 2026-10-16
+# Goblin – Animation Handoff (2026-10-16)
 
-Status: prototype, NOT final asset approval or game integration.
+Branch: `feature/goblin-assets`. The Game Director approved the red-hooded goblin **concept**, not these final animation frames. All animations remain visual prototypes.
 
-The Game Director approved the original red-hooded grassland goblin visual design. Five preliminary animations have been generated locally:
-- idle: 4 frames / 180ms
-- run: 6 frames / 100ms
-- attack: 6 frames / 90ms
-- hit: 3 frames / 110ms
-- death: 5 frames / 150ms
+## Sprite assets (ZIP only, not uploaded to GitHub)
 
-Prototype frames: 64x64 RGBA, horizontal PNG sheets, GIF previews; suggested visual anchor (32,57). All timing values are provisional presentation values only.
+The complete ZIP `eclipse_goblin_handoff_v02.zip` is attached in the Goblin Fach-Chat. Extract its `assets/goblin/animation-work/` directory into the matching repository path on this branch and commit the **actual binary** PNG/GIF files. GitHub connector supports base64 blobs, but no available authorized transfer of the local file bytes into that connector was established in this session. **Do not treat this documentation as an uploaded sprite asset.**
 
-The actual prototype PNG/GIF files are provided in the chat as a downloadable ZIP. They are NOT yet uploaded to GitHub because the connected GitHub text-file interface does not accept binary image content.
+| Animation | PNG | Frames | Frame size | Duration | Anchor | Loop |
+|---|---|---:|---|---:|---|---|
+| idle | goblin_idle.png | 4 | 64x64 | 180 ms | (32,57) | yes |
+| run | goblin_run.png | 6 | 64x64 | 100 ms | (32,57) | yes |
+| attack | goblin_attack.png | 6 | 64x64 | 90 ms | (32,57) | no |
+| hit | goblin_hit.png | 3 | 64x64 | 110 ms | (32,57) | no |
+| death | goblin_death.png | 5 | 64x64 | 150 ms | (32,57) | no |
 
-Quality: initial pixel-art implementation, visibly less detailed than the approved concept; artistic refinement required before handoff. No in-game/mobile runtime tests performed.
+All horizontal RGBA PNG sheets, 24 frames total. The ZIP also includes corresponding GIF previews, a contact sheet, `animations.json`, `preview.html`, and this handoff. JSON and HTML are also committed as text on the branch; HTML will not display the sprite until the actual PNGs are uploaded.
 
-No gameplay, shared files, or main branch changed. Integration and gameplay remain with Hauptzentrale.
+## Checks actually performed
+
+Pillow inspection of existing ZIP: all 5 PNG sheets have expected pixel dimensions, RGBA with alpha extrema 0..255; all GIFs have the expected frame count, transparency index, and per-frame durations. ZIP was repackaged. **Not tested:** browser runtime, phone readability, visual polish against approved design, gameplay integration.
+
+## Known issues and integration notes
+
+The sprite prototype is visually simpler than the approved detailed concept and needs artistic refinement. Frame sizes, anchor and timing are provisional for previews, not binding gameplay or hitbox parameters. Hauptzentrale handles integration and gameplay. No modifications to `main`, `game.js`, `index.html`, `style.css`.
