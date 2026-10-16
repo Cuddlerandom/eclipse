@@ -19,6 +19,12 @@ Verantwortlich für den Gesamtstatus: Hauptzentrale.
 
 **Wichtig:** Fach-Chats sind nicht für Gameplay-Werte, KI, Balancing oder Einbindung in `main` zuständig. Isolierte visuelle Vorschauen sind erlaubt; Vorschauwerte sind Platzhalter.
 
+## Grasland – bestätigter Integrationsstand
+- Grasland-Renderer ist in `main` integriert; GitHub-Integration ist **nicht** gleichbedeutend mit visuell freigegebener oder erfolgreich auf dem iPhone getesteter Version.
+- Game Director hat die Darstellung abgelehnt: zu gleichförmiger grüner Boden, alte Bäume/Felsen/Büsche weiterhin sichtbar.
+- Überarbeitung durch Spielwelt-Fach-Chat nach BALL-x-PIT-inspirierter Pixel-Art-Stilvorgabe und Designfreigabe erforderlich. Bis dahin ist die neue Grasland-Gestaltung **nicht freigegeben**.
+- Öffentliche Website-Bereitstellung und mobile Laufzeittests wurden nicht verifiziert.
+
 ## Offene Prüfungen
 - Exakte aktuelle Spielversion und Gesamtspiel-Laufzeittests.
 - Vollständiger Asset-Bestand und tatsächliche Fach-Commits.
