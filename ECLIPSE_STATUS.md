@@ -1,25 +1,31 @@
-# ECLIPSE — Status und Übergaben
-Stand: 2026-10-16. Verantwortlich: zentrale Hauptzentrale (dieser Chat).
+# ECLIPSE – Status und Übergaben
+Stand: 2026-10-16
+Verantwortlich für den Gesamtstatus: Hauptzentrale.
 
-## Verifiziert
-- Browser-Spiel mit HTML/CSS/JavaScript Canvas.
-- Einstieg über index.html, style.css und game.js.
-- UI: HP, XP, Gold, Wellenstatus, Timer, Dash, Level-up, Werte, Freischaltungen.
+## Verifizierte technische Basis
+- Browser-Spiel mit HTML, CSS und JavaScript/Canvas.
+- Kerndateien: `index.html`, `game.js`, `style.css`.
+- Vorhandene UI-Elemente: HP, XP, Gold, Wellen, Timer, Dash, Level-up, Werte und Freischaltungen.
+- Dies bestätigt vorhandenen Code bzw. UI, nicht automatisch erfolgreiche Laufzeittests.
 
-## Arbeitsbereiche
-| Bereich | Zuständigkeit | Status |
+## Bereiche und Zuständigkeiten
+| Bereich | Zuständig | Status |
 |---|---|---|
-| Gesamtspiel & Integration | Hauptzentrale | aktiv |
-| Krieger | Krieger-Chat | in Arbeit; Übergabe/Commit noch zu verifizieren |
-| Wölfe | Gegner-Wolf-Chat | in Arbeit; Übergabe/Commit noch zu verifizieren |
-| Spielwelt | Spielwelt-Chat | in Arbeit; Übergabe/Commit noch zu verifizieren |
-| Bosse, UI, weitere Systeme | nach Beauftragung | nicht bestätigt |
+| Gameplay, Werte, KI, Hitboxen, Integration, QA | Hauptzentrale | Zuständigkeit bestätigt; technische Bestandsaufnahme offen |
+| Kriegerdesign und Animationen | Zugewiesener Krieger-Fach-Chat | Übergabe und Commit noch zu verifizieren |
+| Wolfsdesign und Animationen | Zugewiesener Wolfs-Fach-Chat | Übergabe und Commit noch zu verifizieren |
+| Visuelle Spielwelt | Zugewiesener Spielwelt-Fach-Chat | Übergabe und Commit noch zu verifizieren |
+| Weitere visuelle Fachbereiche | Nach Zuweisung durch Game Director | Noch nicht verifiziert |
+
+**Wichtig:** Fach-Chats sind nicht für Gameplay-Werte, KI, Balancing oder Einbindung in `main` zuständig. Isolierte visuelle Vorschauen sind erlaubt; Vorschauwerte sind Platzhalter.
 
 ## Offene Prüfungen
-- Aktuelle Gameplay-Version und Laufzeittests.
-- Bestehende Animationen, Original-Assets, Hitboxen, Frameraten.
-- Integration neuer Fachmodule erst nach Codeprüfung.
-- Test auf Desktop und iPhone.
+- Exakte aktuelle Spielversion und Gesamtspiel-Laufzeittests.
+- Vollständiger Asset-Bestand und tatsächliche Fach-Commits.
+- Animationsschnittstellen und Originalreferenzen.
+- Integrations- und Regressionstests auf Desktop und mobilen Geräten.
 
-## Aktualisierungsregel
-Nach jeder Fach-Übergabe: betroffene Dateien, Commit, Integrationsstatus und Testresultat hier nachführen. Niemals „fertig“ ohne überprüfbaren Stand behaupten.
+## Statusdefinition
+Geplant → in Entwicklung → Design/Asset fertig → isoliert getestet → zur Integration bereit → durch Hauptzentrale in `main` integriert → im Gesamtspiel getestet.
+
+Nur verifizierte Übergaben, Commits und Tests als abgeschlossen markieren. Nach jeder Übergabe betroffene Dateien, Commit, offene Probleme und Integrationsstatus dokumentieren.
