@@ -1,0 +1,55 @@
+{
+  "frame_width": 96,
+  "frame_height": 64,
+  "facing": "right",
+  "visual_anchor": [
+    48,
+    56
+  ],
+  "preview_only": true,
+  "note": "V5 prototypes; PNG binaries NOT uploaded to GitHub",
+  "animations": {
+    "idle": {
+      "path": "wolf-assets/sprites/idle.png",
+      "frames": 8,
+      "fps": 8,
+      "frame_duration_ms": 125,
+      "loop": true
+    },
+    "walk": {
+      "path": "wolf-assets/sprites/walk.png",
+      "frames": 8,
+      "fps": 11,
+      "frame_duration_ms": 90.91,
+      "loop": true
+    },
+    "run": {
+      "path": "wolf-assets/sprites/run.png",
+      "frames": 10,
+      "fps": 15,
+      "frame_duration_ms": 66.67,
+      "loop": true
+    },
+    "bite": {
+      "path": "wolf-assets/sprites/bite.png",
+      "frames": 8,
+      "fps": 13,
+      "frame_duration_ms": 76.92,
+      "loop": false
+    },
+    "hit": {
+      "path": "wolf-assets/sprites/hit.png",
+      "frames": 6,
+      "fps": 10,
+      "frame_duration_ms": 100,
+      "loop": false
+    },
+    "death": {
+      "path": "wolf-assets/sprites/death.png",
+      "frames": 10,
+      "fps": 10,
+      "frame_duration_ms": 100,
+      "loop": false
+    }
+  }
+}
